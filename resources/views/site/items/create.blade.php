@@ -16,7 +16,7 @@
     @include('site.validation.errors')
 
 
-    <div class="shadow p-3 mb-5 bg-light rounded">
+    <div class="shadow p-3 mb-5 rounded" style="background-color: #EBEBEB">
         <form method="post" class="" id="cria_item" name="cria_item" action="{{ route('store_item') }}">
             <fieldset>
             <p><h4>Digite os dados do item a ser inserido:</h4></p>

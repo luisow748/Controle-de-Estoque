@@ -8239,7 +8239,9 @@ h1, h2, h3, h4, h5,
       #sidebar ul li.active > a:hover {
         background: #2f89fc;
         border-bottom: 1px solid #2f89fc; }
-  @media (max-width: 991.98px) {
+
+/*Valor a partir do qual o sidebar aparece*/
+@media (max-width: 1170px) {
     #sidebar {
       margin-left: -250px; }
       #sidebar.active {

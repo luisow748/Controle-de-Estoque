@@ -18,7 +18,7 @@ $url = $var['caminho_absoluto'];
 <!-- Vertical navbar -->
     <div class="wrapper d-flex align-items-stretch">
 
-@include('site.structures.sidebar')
+{{-- @include('site.structures.sidebar') --}}
 
 <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">

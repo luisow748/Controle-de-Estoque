@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classes\Structure\Sidebar;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -93,5 +94,10 @@ class IndexController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function teste(){
+        $category = Category::query()->get();
+        return view('site.index.test', compact('category'));
     }
 }

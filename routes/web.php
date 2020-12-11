@@ -19,8 +19,9 @@ use App\Http\Controllers\Admin\{AdminController, UserController};
 |
 */
 // INDEX
-Route::get('/', [IndexController::class, 'index']);
-Route::get('/index', [IndexController::class, 'index'])->name('index');
+Route::get('/', [ItemController::class, 'index']);
+Route::get('/index', [ItemController::class, 'index'])->name('index');
+Route::get('/teste', [IndexController::class, 'teste']);
 //Aut
 Route::get('/entrar', [EnterController::class, 'index'])->name('form_enter');
 Route::post('/entrar', [EnterController::class, 'enter'])->name('enter');

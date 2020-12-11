@@ -74,3 +74,23 @@ body {
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
+
+.index-container{
+    background-color: #EBEBEB;
+    -webkit-box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65);
+    box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65);
+    width: 100%;
+}
+.index-item{
+background-color: #F5F5F5;
+max-width: 300px;
+max-height: 300px;
+overflow-y: auto;
+margin: 10px 10px 10px 10px;
+float: left;
+border: 1px solid  #E4E4E4;
+border-radius: 10px;
+padding: 5px;
+-webkit-box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.30);
+    box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.30);
+}

@@ -21,7 +21,7 @@
                 <div class='dropdown-menu' aria-labelledby='dropdown01'>
                     <a class='dropdown-item' href='{!! $var['top_menu_6_0l'] !!}'> {!! $var['top_menu_6_0'] !!} </a>
                     <a class='dropdown-item' href='{!! $var['top_menu_6_1l'] !!}'> {!! $var['top_menu_6_1'] !!} </a>
-                    <a class='dropdown-item' href='{!! $var['top_menu_6_2l'] !!}'> {!! $var['top_menu_6_2'] !!} </a>
+                    {{-- <a class='dropdown-item' href='{!! $var['top_menu_6_2l'] !!}'> {!! $var['top_menu_6_2'] !!} </a> --}}
                 </div>
             </li>
 
@@ -33,7 +33,7 @@
                 <div class='dropdown-menu' aria-labelledby='dropdown01'>
                     <a class='dropdown-item' href='{!! $var['top_menu_2_1l'] !!}'>{!! $var['top_menu_2_1'] !!}</a>
                     <a class='dropdown-item' href='{!! $var['top_menu_2_2l'] !!}'>{!! $var['top_menu_2_2'] !!}</a>
-                    <a class='dropdown-item' href='{!! $var['top_menu_2_3l'] !!}'>{!! $var['top_menu_2_3'] !!}</a>
+                    {{-- <a class='dropdown-item' href='{!! $var['top_menu_2_3l'] !!}'>{!! $var['top_menu_2_3'] !!}</a> --}}
 
                 </div>
             </li>
@@ -47,7 +47,7 @@
                 <div class='dropdown-menu' aria-labelledby='dropdown01'>
                     <a class='dropdown-item' href='{!! $var['top_menu_4_1l'] !!}'>{!! $var['top_menu_4_1'] !!}</a>
                     <a class='dropdown-item' href='{!! $var['top_menu_4_2l'] !!}'>{!! $var['top_menu_4_2'] !!}</a>
-                    <a class='dropdown-item' href='{!! $var['top_menu_4_3l'] !!}'>{!! $var['top_menu_4_3'] !!}</a>
+                    {{-- <a class='dropdown-item' href='{!! $var['top_menu_4_3l'] !!}'>{!! $var['top_menu_4_3'] !!}</a> --}}
 
                 </div>
             </li>
@@ -77,7 +77,7 @@
                     <button class="dropdown-item" type="button" href="{!! $admin['area_usuario_link']!!}">
                         Perfil</button>
                     <button class="dropdown-item" type="button">Opções</button>
-                   
+
                 </div>
             </div>
 

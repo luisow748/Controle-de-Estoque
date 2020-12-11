@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Items;
 
+
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemsFormRequest;
 use App\Models\{Category, Section, SubCategory, Item};
@@ -22,11 +23,12 @@ class ItemController extends Controller
     public function index(Request $request)
     {
         $items = Item::query()->orderBy('id')->get();
+        $category = Category::query()->get();
         $message = $request->session()->get('message');
 
 
 
-        return view('site.items.index', compact('items', 'message'));
+        return view('site.items.index', compact('items', 'message', 'category'));
     }
 
     public function show(Request $request)

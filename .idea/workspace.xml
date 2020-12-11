@@ -24,8 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="976b766a-c548-4c19-ac3f-786c6710a9d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dist/css/sidebar4/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/css/sidebar4/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/dist/js/sidebar4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dist/js/sidebar4/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/items/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/items/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,7 +281,7 @@
       <workItem from="1606166903331" duration="242000" />
       <workItem from="1606167218698" duration="338000" />
       <workItem from="1606176007609" duration="796000" />
-      <workItem from="1607203182985" duration="950000" />
+      <workItem from="1607203182985" duration="1728000" />
     </task>
     <servers />
   </component>

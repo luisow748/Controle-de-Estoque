@@ -78,10 +78,10 @@
             </div>
 
 
-                    <div class="form-inline mb-4">
-                            <label for="photo_name" class="mr-4">Foto do Item: </label>
-                            <input type="file" placeholder="" class="form-control" name="photo_name" id="photo_name">
-                    </div>
+{{--                    <div class="form-inline mb-4">--}}
+{{--                            <label for="photo_name" class="mr-4">Foto do Item: </label>--}}
+{{--                            <input type="file" placeholder="" class="form-control" name="photo_name" id="photo_name">--}}
+{{--                    </div>--}}
             <button type="submit" class="btn btn-primary">Adicionar Item</button>
             </fieldset>
     </form>

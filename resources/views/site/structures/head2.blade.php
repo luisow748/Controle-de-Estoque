@@ -16,7 +16,7 @@ $caminho_absoluto = '/';
     @livewireStyles
 {{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
 
-    <link rel='shortcut icon' href="{!! $caminho_absoluto !!}icon.ico">
+    <link rel='shortcut icon' href="{{asset('icon.ico')}}">
     <link href='{!! asset('assets/dist/css/font_awesome/all.css') !!}' rel='stylesheet'> <!--load all styles -->
 
     <link rel='canonical' href='https://getbootstrap.com/docs/4.5/examples/offcanvas/'>

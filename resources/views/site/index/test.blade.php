@@ -17,14 +17,14 @@ use App\Models\Item;
 
 @section('content')
 <!-- Vertical navbar -->
-
+<h3>Items por Categoria:</h3>
 <div class="d-flex flex-row flex-wrap mb-3 index-container">
+
     @foreach($category as $cat)
     <div class="index-item">
+        <livewire:items-list :category="$cat"/>
 
-        <h5>Itens da Categoria:</h5> <h6>{{$cat->name}}</h6>
-
-        @foreach(Item::where('category_id', $cat->id_category)
+        {{-- @foreach(Item::where('category_id', $cat->id_category)
 ->orderBy('id')->get() as $item)
 
             <a href="{{ $url }}items/mostrar/{{$item->id}}">
@@ -37,25 +37,17 @@ use App\Models\Item;
                     <i class="fas fa-arrow-alt-circle-right"></i>
                 </button>
             </a>
-            Item: {{$item->name}} - Qde: {{$item->qty}} <br>
-        @endforeach
+            {{$item->name}} - Qde: {{$item->qty}} <br>
+        @endforeach --}}
+
 
     </div>
     @endforeach
 
-    <div class="index-item">Flex item 2dsadsadasdasdasdasdasd
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
+    <div class="index-item">
+        {{-- <livewire:items-list :category="$cat"/> --}}
     </div>
-    <div class="index-item">Flex item 3</div>
+    <div class="index-item"></div>
   </div>
 
 

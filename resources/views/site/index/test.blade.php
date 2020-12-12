@@ -3,6 +3,7 @@
 $s = new Sidebar($var);
 $sidebar = $s->getSidebar();*/
 $url = $var['caminho_absoluto'];
+use App\Models\Item;
 ?>
 
 @extends('layout')
@@ -22,14 +23,23 @@ $url = $var['caminho_absoluto'];
     <div class="index-item">
 
         <h5>Itens da Categoria:</h5> <h6>{{$cat->name}}</h6>
-        Flex item 2dsadsadasdasdasdasdasd
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
-        dsadasdasd <br> dsadasdasd <br>dsadasdasd <br> asasdffs
+
+        @foreach(Item::where('category_id', $cat->id_category)
+->orderBy('id')->get() as $item)
+
+            <a href="{{ $url }}items/mostrar/{{$item->id}}">
+                <button id="acessItem" class="btn btn-info btn-sm mb-1">
+                    <i class="fas fa-angle-double-right "></i>
+                </button>
+            </a>
+            <a href="{{ $url }}items/editar/{{$item->id}}">
+                <button id="editItem" class="btn btn-success btn-sm mb-1">
+                    <i class="fas fa-arrow-alt-circle-right"></i>
+                </button>
+            </a>
+            Item: {{$item->name}} - Qde: {{$item->qty}} <br>
+        @endforeach
+
     </div>
     @endforeach
 

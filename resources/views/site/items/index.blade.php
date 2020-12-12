@@ -18,7 +18,7 @@ $url = $var['caminho_absoluto'];
             {{$message}}
         </div>
     @endif
-
+    <a href="{{route('form_create_item')}}" class="btn btn-dark mb-2">Adicionar novo Item</a>
 
     <table class="table table-sm table-bordered bg-white rounded shadow table-hover text-center">
         <thead class="thead-dark">

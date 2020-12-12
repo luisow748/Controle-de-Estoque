@@ -24,7 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="976b766a-c548-4c19-ac3f-786c6710a9d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/items/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/items/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/offcanvas.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/offcanvas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/index/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/items/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/items/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,6 +284,7 @@
       <workItem from="1606167218698" duration="338000" />
       <workItem from="1606176007609" duration="796000" />
       <workItem from="1607203182985" duration="1728000" />
+      <workItem from="1607728322937" duration="2085000" />
     </task>
     <servers />
   </component>
@@ -298,6 +301,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="349" y="67" key="#CLI_Interpreters" timestamp="1602283712063">

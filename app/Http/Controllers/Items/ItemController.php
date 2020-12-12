@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Items;
 
-
+use App\Classes\Entities\Category as EntitiesCategory;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemsFormRequest;
 use App\Models\{Category, Section, SubCategory, Item};
@@ -22,13 +22,12 @@ class ItemController extends Controller
 
     public function index(Request $request)
     {
-        $items = Item::query()->orderBy('id')->get();
         $category = Category::query()->get();
-        $message = $request->session()->get('message');
-
-
-
-        return view('site.items.index', compact('items', 'message', 'category'));
+        return view('site.index.test', compact('category'));
+        // $items = Item::query()->orderBy('id')->get();
+        // $category = Category::query()->get();
+        // $message = $request->session()->get('message');
+        // return view('site.items.index', compact('items', 'message', 'category'));
     }
 
     public function show(Request $request)
@@ -107,6 +106,11 @@ class ItemController extends Controller
 
        return redirect()->route('list_items');
 
+    }
+    public function listItemsFromCategory(Request $request){
+        $items = Item::where('category_id', $request->id)->orderBy('name')->get();
+        $cat = Category::find($request->id);
+        return view('site.items.items_from_category', compact('items', 'cat'));
     }
 
 

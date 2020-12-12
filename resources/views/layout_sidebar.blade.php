@@ -15,7 +15,10 @@ $url = $var['caminho_absoluto'];
 
 @yield('header')
 
+<!-- Vertical navbar -->
+<div class="wrapper d-flex align-items-stretch mt-4">
 
+    @include('site.structures.sidebar')
 
 <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">
@@ -25,7 +28,7 @@ $url = $var['caminho_absoluto'];
 
         </div>
 
-
+</div>
 @include('site.structures.scripts')
 
 </body>

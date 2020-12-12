@@ -19,8 +19,8 @@ use App\Http\Controllers\Admin\{AdminController, UserController};
 |
 */
 // INDEX
-Route::get('/', [ItemController::class, 'index']);
-Route::get('/index', [ItemController::class, 'index'])->name('index');
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/index', [IndexController::class, 'index'])->name('index');
 Route::get('/teste', [IndexController::class, 'teste']);
 //Aut
 Route::get('/entrar', [EnterController::class, 'index'])->name('form_enter');
@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     // ITEMS
+    // Route::get('/items', [ItemController::class, 'index'])->name('list_items');
     Route::get('/items', [ItemController::class, 'index'])->name('list_items');
 
 
@@ -71,7 +72,7 @@ Route::middleware(['auth'])->group(function () {
     //CATEGORIAS
     Route::get('/categorias', [CategoryController::class, 'index'])->name('list_category');
     Route::post('/categorias', [CategoryController::class, 'returnCategory'])->name('return_category');
-    Route::get('/categorias/{id}/items/', [CategoryController::class, 'listItemsFromCategory'])
+    Route::get('/categorias/{id}/items', [ItemController::class, 'listItemsFromCategory'])
         ->name('list_items_from_category');
     Route::get('/categorias/criar', [CategoryController::class, 'create'])->name('form_create_category');
     Route::post('categorias/criar', [CategoryController::class, 'store']);

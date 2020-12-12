@@ -7,7 +7,7 @@ namespace App\Http\Controllers\Category;
 use App\Http\Requests\CategoryFormRequest;
 use App\Models\Category;
 
-use app\Models\Item;
+use App\Models\Item;
 use App\Models\Section;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -55,7 +55,9 @@ class CategoryController extends Controller{
     public function destroy(Request $request)
     {
 
+        // $category->items()->delete();
         Category::destroy($request->id);
+
         $request->session()->flash(
             'message', "Categoria {$request->name} removido com sucesso"
         );

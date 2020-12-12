@@ -2,6 +2,7 @@
 use App\Models\Item;
 ?>
 <div>
+
     <h5> {{$category->name}}</h5>
     <table class="table table-sm table-bordered bg-white rounded shadow table-hover text-center">
         <thead class="thead-dark">

@@ -61,6 +61,9 @@
             <li class='nav-item'>
                 <a class='nav-link' href='{!! $var['top_menu_5l'] !!}'>{!! $var['top_menu_5'] !!}</a>
             </li>
+            <li class='nav-item'>
+                <a class='nav-link' href='{{'/teste'}}'>Teste</a>
+            </li>
 
 
         </ul>

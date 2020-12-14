@@ -22,6 +22,8 @@ use App\Http\Controllers\Admin\{AdminController, UserController};
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/index', [IndexController::class, 'index'])->name('index');
 Route::get('/teste', [IndexController::class, 'teste']);
+Route::get('/funcionalidades', [IndexController::class, 'func']);
+
 //Aut
 Route::get('/entrar', [EnterController::class, 'index'])->name('form_enter');
 Route::post('/entrar', [EnterController::class, 'enter'])->name('enter');
@@ -76,7 +78,7 @@ Route::middleware(['auth'])->group(function () {
         ->name('list_items_from_category');
     Route::get('/categorias/criar', [CategoryController::class, 'create'])->name('form_create_category');
     Route::post('categorias/criar', [CategoryController::class, 'store']);
-    Route::get('/categorias/editar', [CategoryController::class, 'update'])->name('form_edit_category');
+    Route::get('/categorias/editar/{id}', [CategoryController::class, 'update'])->name('form_edit_category');
     Route::delete('/categorias/{id}', [CategoryController::class, 'destroy']);
 
 

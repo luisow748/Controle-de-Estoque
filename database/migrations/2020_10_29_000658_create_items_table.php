@@ -28,7 +28,7 @@ class CreateItemsTable extends Migration
             $table->unsignedBigInteger('category_id');
 
             $table->foreign('category_id')
-                ->references('id_category')->on('categories');
+                ->references('id_category')->on('categories')->onDelete('cascade');
 
 
 

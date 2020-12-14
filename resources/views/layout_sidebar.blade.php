@@ -21,9 +21,13 @@ $url = $var['caminho_absoluto'];
     @include('site.structures.sidebar')
 
 <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4"></h2>
+        <div id="content" class="p-md-5 pt-5">
 
+            @if(!empty($message))
+            <div class="alert alert-success">
+                {{$message}}
+            </div>
+            @endif
             @yield('content')
 
         </div>

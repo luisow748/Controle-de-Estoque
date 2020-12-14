@@ -4,7 +4,46 @@ body {
 }
 
 body {
-  padding-top: 56px;
+  padding-top: 26px;
+
+
+  margin: 0 auto;
+
+}
+body::after{
+    background-image: url('img/estoque2.jpg');
+    background-repeat: no-repeat;
+    content: "";
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.index.item > h1, .index-item > h2, .index-item > h3{
+background-color: transparent;
+-webkit-box-shadow: 0px 0px 0px 0px rgba(82,82,82,0.00);
+box-shadow: 0px 0px 0px 0px rgba(82,82,82,0.00);
+}
+.index-item h1 , h2, h3{
+    color: black;
+    background-color: #EAEAEA;
+    width: fit-content;
+    padding: 10px 10px 10px 10px;
+    -webkit-box-shadow: 2px 2px 8px 3px rgba(82,82,82,0.56);
+box-shadow: 2px 2px 8px 3px rgba(82,82,82,0.56);
+}
+.btn-shadow{
+    -webkit-box-shadow: 2px 2px 8px 3px rgba(82,82,82,0.56);
+box-shadow: 2px 2px 8px 3px rgba(82,82,82,0.56);
+}
+
+.btn-shadow:hover{
+
+    -webkit-box-shadow: 2px 2px 8px 3px rgba(0, 128, 255, 0.40);
+box-shadow: 2px 2px 8px 3px rgba(0, 128, 255, 0.40);
 }
 
 @media (max-width: 991.98px) {
@@ -76,25 +115,36 @@ body {
 .lh-150 { line-height: 1.5; }
 
 .index-container{
-    background-color: #EBEBEB;
-    -webkit-box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65);
-    box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65);
+
+    /* background-color: #EBEBEB; */
+    /* -webkit-box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65);
+    box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65); */
     width: 100%;
-    padding: 15px;
+    /* padding: 15px; */
 }
 .index-item{
-background-color: #F5F5F5;
+background-color: #fbfbfb;
 max-width: 560px;
-    min-width: 560px;
+    min-width: 440px;
 max-height: 300px;
 overflow-y: auto;
+overflow-x: auto;
 margin: 10px 10px 10px 10px;
 float: left;
 border: 1px solid  #E4E4E4;
 border-radius: 10px;
 padding: 10px;
-/*-webkit-box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.30);*/
-/*    box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.30);*/
+
     -webkit-box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
     box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
 }
+.index-item::after, .index-item::before{
+  content: "";
+  clear: both;
+  display: table;
+}
+.index-item .btn{
+    -webkit-box-shadow: 0px 4px 5px 4px rgba(92,92,92,0.40);
+    box-shadow: 0px 4px 5px 4px rgba(92,92,92,0.40);
+}
+

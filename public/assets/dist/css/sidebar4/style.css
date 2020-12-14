@@ -8196,6 +8196,7 @@ h1, h2, h3, h4, h5,
   min-width: 250px;
   max-width: 250px;
   background: #212121;
+  padding-top: 10px;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -8225,7 +8226,7 @@ h1, h2, h3, h4, h5,
       #sidebar ul li > ul li {
         font-size: 14px; }
     #sidebar ul li a {
-      padding: 15px 30px;
+      padding: 04px 15px 0 08px;
       display: block;
       color: rgba(255, 255, 255, 0.6);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
@@ -8241,7 +8242,7 @@ h1, h2, h3, h4, h5,
         border-bottom: 1px solid #2f89fc; }
 
 /*Valor a partir do qual o sidebar aparece*/
-@media (max-width: 1170px) {
+@media (max-width: 1180px) {
     #sidebar {
       margin-left: -250px; }
       #sidebar.active {

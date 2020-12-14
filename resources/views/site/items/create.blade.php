@@ -16,51 +16,51 @@
     @include('site.validation.errors')
 
 
-    <div class="shadow p-3 mb-5 rounded" style="background-color: #EBEBEB">
+    <div class="shadow p-3 mb-5 rounded d-flex flex-wrap" style="background-color: #EBEBEB">
         <form method="post" class="" id="cria_item" name="cria_item" action="{{ route('store_item') }}">
             <fieldset>
             <p><h4>Digite os dados do item a ser inserido:</h4></p>
             @csrf
-            <div class="form-row align-items-center mb-4">
-                <div class="col-4 border  rounded m-1">
+            <div class="d-flex">
+                <div class=" ">
                     <label for="name" class="">Nome:</label>
                     <input type="text" placeholder="Nome" class="form-control" name="name" id="name">
 
                 </div>
-                <div class="col-6 border  rounded m-1">
+                <div class=" ">
                     <label for="description" class="">Descrição:</label>
                     <input type="text" placeholder="Descrição do item" class="form-control" name="description" id="description">
 
                 </div>
             </div>
 
-            <div class="form-row align-items-center mb-4 ">
+            <div class="d-flex flex-wrap d-md-inline-flex p-2">
 
-                <div class="col-2 border  rounded m-1">
-                    <label for="qty" class="">Quantidade</label>
+                <div class="mr-2 d-flex ">
+                    <label for="qty" class="p-2">Quantidade </label>
                     <input type="number" placeholder="Quantidade"class="form-control" name="qty" value="1" id="qty">
                 </div>
 
-                <div class="col-2 border  rounded m-1">
-                    <label for="minimum_qty" class="">Quantidade mínima</label>
+                <div class="mr-2 d-flex ">
+                    <label for="minimum_qty" class="p-2">Qde mín. </label>
                     <input type="number" placeholder="Qde Mínima"class="form-control" name="minimum_qty" value="1" id="minimum_qty">
                 </div>
 
-                <div class="col-3 border  rounded m-1">
-                    <label for="paid_price" class="">Preço pago</label>
+                <div class="mr-2 d-flex ">
+                    <label for="paid_price" class="p-2">Preço</label>
                     <input type="text" placeholder="Preço pago (R$)"
                            class="form-control" name="paid_price"  id="paid_price">
                 </div>
 
-                <div class="col-3 border  rounded m-1">
-                    <label for="new_price" class="">Preço Atualizado</label>
+                <div class="mr-2 d-flex ">
+                    <label for="new_price" class="p-2">Preço Atual </label>
                     <input type="text" placeholder="Preço atualizado (R$)"
                            class="form-control" name="new_price" id="new_price">
                 </div>
 
             </div>
 
-            <div class="form-row align-items-center mb-4 m-1 text-center">
+            <div class="">
 
 {{--Se estiver vindo um Model Categoria, não seleciona seção nem categoria --}}
                 @if(isset($categoria))

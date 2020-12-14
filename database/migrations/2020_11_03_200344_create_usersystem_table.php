@@ -23,7 +23,9 @@ class CreateUsersystemTable extends Migration
             $table->string('pwd');
             $table->boolean('is_admin')->nullable();
             $table->boolean('is_owner')->nullable();
+
         });
+
     }
 
     /**
@@ -36,3 +38,5 @@ class CreateUsersystemTable extends Migration
         Schema::dropIfExists('usersystem');
     }
 }
+
+

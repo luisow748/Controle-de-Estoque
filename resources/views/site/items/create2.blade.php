@@ -18,22 +18,22 @@
             </ul>
         </div>
     @endif
-
+<div class='flex-container'>
     <form method="post">
         @csrf
-        <div class="form-group">
+        <div class="form-group flex-item">
             <label for="name" class="">Nome</label>
             <input type="text" class="form-control" name="name" id="name">
         </div>
-        <div class="form-group">
+        <div class="form-group flex-item">
             <label for="description" class="">Descrição</label>
             <input type="text" class="form-control" name="description" id="description">
         </div>
-        <div class="form-group">
+        <div class="form-group flex-item">
             <label for="photo_name" class="">Nome da foto</label>
             <input type="text" class="form-control" name="photo_name" id="photo_name">
         </div>
-        <div class="form-group">
+        <div class="form-group flex-item">
             <label for="qty" class="">Quantidade</label>
             <input type="text" class="form-control" name="qty" id="qty">
         </div>
@@ -74,4 +74,5 @@
 
         <button class="btn btn-primary">Adicionar Item</button>
     </form>
+</div>
 @endsection

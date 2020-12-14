@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    Formulário adição Categorias
+    Formulário Categorias
 @endsection
 
 @section('header')
@@ -18,6 +18,10 @@
             </ul>
         </div>
     @endif
+
+@if(isset($cat))
+Edição
+@endif
 
     <form method="post">
         @csrf

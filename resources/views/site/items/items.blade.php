@@ -1,31 +1,46 @@
-<!doctype html>
-<html lang="en">
-
 <?php
-include_once 'assets/src/includes.php';
-
-$h = new Head($section, $var);
-echo $h->getHead();
+use App\Models\Item;
 ?>
 
-<body class="bg-light">
-    <?php
-    $header = new Header($section, $var);
-    echo $header->getHeader();
+@extends('layout_sidebar')
+    @section('title')
+       Test
+    @endsection
 
-        $main = new Main();
-        $main->setSection($section);
-        //$main->setMain();
-        //echo $main->getMain();
-       // echo "</main>";
+@section('header')
 
-        $script = new Script();
-        $script->setScript($section);
-        echo $script->getScripts();
-
-    ?>
+@endsection
 
 
-</body>
 
-</html>
+@section('content')
+<!-- Vertical navbar -->
+
+
+
+<h3>Items por Categoria:</h3>
+
+<a href="{{route('form_create_item')}}" class="btn btn-secondary ml-2 mb-2 btn-shadow">Adicionar novo Item </a>
+
+    <div class="d-flex flex-row flex-wrap mb-3 index-container">
+
+        @foreach($category as $cat)
+        <div class="index-item">
+
+            <livewire:items-list :category="$cat"/>
+
+        </div>
+        @endforeach
+
+
+        {{-- <div class="index-item"></div> --}}
+    </div>
+
+
+{{-- <div class="wrapper d-flex align-items-stretch"> --}}
+
+
+{{-- </div> --}}
+<a href="{{route('form_create_item')}}" class="btn btn-secondary ml-2 mb-2 btn-shadow">Adicionar novo Item </a>
+@endsection
+

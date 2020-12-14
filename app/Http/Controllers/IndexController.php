@@ -100,4 +100,8 @@ class IndexController extends Controller
         $category = Category::query()->get();
         return view('site.index.test', compact('category'));
     }
+
+    public function func(){
+        return view('site.index.func');
+    }
 }

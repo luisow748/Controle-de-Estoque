@@ -8,7 +8,8 @@
         {{$message}}
     </div>
 @endif
-<a href="{{route('form_create_item')}}" class="btn btn-dark mb-2">Adicionar novo Item</a>
+<a href="/items/criar/{{$cat->id_category}}" class="btn btn-info mb-2 btn-shadow">Adicionar novo Item na categoria {{$cat->name}}</a>
+<a href="{{route('form_create_item')}}" class="btn btn-secondary ml-2 mb-2 btn-shadow">Adicionar novo Item em outra categoria</a>
 
 <table class="table table-sm table-bordered bg-white rounded shadow table-hover text-center">
     <thead class="thead-dark">
@@ -68,6 +69,7 @@
 
 </table>
 
-<a href="{{route('form_create_item')}}" class="btn btn-dark mb-2">Adicionar novo Item</a>
+<a href="/items/criar/{{$cat->id_category}}" class="btn btn-info mb-2 btn-shadow">Adicionar novo Item na categoria {{$cat->name}}</a>
+<a href="{{route('form_create_item')}}" class="btn btn-secondary ml-2 mb-2 btn-shadow ">Adicionar novo Item em outra categoria</a>
 
 @endsection

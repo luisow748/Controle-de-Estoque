@@ -14,10 +14,10 @@ use App\Models\Category;
                 <a href='/items'><span class='fa fa-home mr-3'></span> Todas </a>
             </li>
 
-@foreach(Category::query()->orderBy('name')->get() as $cat)
+@foreach(Category::query()->orderBy('id_category')->get() as $cat)
 
             <li class=''>
-                <a href='/categorias/{{$cat->id_category}}/items'><span class='fa fa-home mr-3'></span>{{$cat->name}} </a>
+                <a href='/categorias/{{$cat->id_category}}/items'><span class='fas fa-angle-right mr-3'></span> {{$cat->id_category}} - {{$cat->name}} </a>
             </li>
 
 @endforeach

@@ -40,7 +40,7 @@ $url = $var['caminho_absoluto'];
                 <td>{{$cat->section_name}}</td>
                 <td>
                     <div class="form-row">
-                        <form method="post" action="{{$url}}categorias/{{$cat->id_category}}"
+                        <form method="post" action="/categorias/{{$cat->id_category}}"
                               onsubmit="return confirm('Tem certeza que deseja ' +
                                   'remover {{addslashes($cat->name)}}?')">
                             @csrf
@@ -54,13 +54,13 @@ $url = $var['caminho_absoluto'];
 
                             <button id="acessCat" class="btn btn-dark btn-sm m-1"> <i class="fas fa-angle-double-right "></i> </button>
 
-                        <a href="{{$url}}items/criar/{{$cat->id_category}}">
+                        <a href="/items/criar/{{$cat->id_category}}">
                             @csrf
                         <button id="addItem" class="btn btn-info btn-sm m-1" > <i class="fas fa-plus"></i> </button>
                         </a>
-
-                        <button id="addSubCat" class="btn btn-success btn-sm m-1 "> <i class="fas fa-angle-double-down"></i></button>
-
+                        <a href='/categorias/editar/{{$cat->id_category}}'>
+                            <button id="editCat" class="btn btn-success btn-sm m-1 "> <i class="fa fa-database"></i></button>
+                        </a>
                     </div>
                 </td>
             </tr>

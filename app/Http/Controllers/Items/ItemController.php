@@ -23,10 +23,11 @@ class ItemController extends Controller
     public function index(Request $request)
     {
         $category = Category::query()->get();
-        return view('site.index.test', compact('category'));
+        $message = $request->session()->get('message');
+        return view('site.items.items', compact('category', 'message'));
         // $items = Item::query()->orderBy('id')->get();
         // $category = Category::query()->get();
-        // $message = $request->session()->get('message');
+
         // return view('site.items.index', compact('items', 'message', 'category'));
     }
 

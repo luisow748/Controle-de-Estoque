@@ -48,10 +48,13 @@ class CategoryController extends Controller{
         return redirect()->route('list_category');
     }
 
-    public function update()
+    public function update(Request $request)
     {
-        return view('site.category.update');
+        $cat = Category::find($request->id);
+        $section = Section::query()->orderBy('name')->get();
+        return view('site.category.create', compact('cat', 'section'));
     }
+
     public function destroy(Request $request)
     {
 

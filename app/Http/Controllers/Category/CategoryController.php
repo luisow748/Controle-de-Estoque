@@ -8,6 +8,7 @@ use App\Http\Requests\CategoryFormRequest;
 use App\Models\Category;
 
 use App\Models\Item;
+use App\Services\Category\update_category;
 use App\Models\Section;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -29,6 +30,12 @@ class CategoryController extends Controller{
         $section = Section::query()->orderBy('name')->get();
         return view('site.category.create')->with(compact('section'));
     }
+
+public function createCatWithSection(Request $request){
+    $section_selected = Section::where('id_section',$request->id)->first();
+    return view('site.category.create')->with(compact('section_selected'));
+}
+
     public function store(CategoryFormRequest $request)
     {
         DB::beginTransaction();
@@ -45,6 +52,22 @@ class CategoryController extends Controller{
         $request->session()->flash(
             'message',"Categoria [{$category->id_category}] ({$category->name}) criada com sucesso"
         );
+        return redirect()->route('list_category');
+    }
+
+    public function update_store_category(Request $request){
+        $update_cat = new update_category();
+        $cat_updated = $update_cat->update($request);
+        if(isset($cat_updated)){
+            $request->session()->flash(
+                'message',"Categoria '{$request->name}' atualizada com sucesso"
+            );
+        }else{
+            $request->session()->flash(
+                'message',"Categoria [{$request->name}] Não foi atualizada"
+            );
+        }
+
         return redirect()->route('list_category');
     }
 

@@ -22,7 +22,7 @@ $user = Auth::user();
                     <div class="index-item" >
                         @if(Auth::user())
                             <h3>Bem vindo, {{ $user->name }}.</h3>
-                            @endif
+                        @endif
                              <h6>Este é o aplicativo {{config('variaveis.nome_app')}}</h6>
                              <p>Com ele, você gerencia todo o estoque da sua empresa, de maneira automatizada, organizada e produtiva!</p>
 

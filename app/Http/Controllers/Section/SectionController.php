@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryFormRequest;
 
 use App\Models\Section;
+use App\Services\Section\update_section;
 use Illuminate\Http\Request;
 
 class SectionController extends Controller
@@ -30,9 +31,25 @@ class SectionController extends Controller
         return redirect()->route('list_section');
     }
 
-    public function update()
+    public function update(Request $request)
     {
-        return view('site.section.update');
+        $section = Section::where('id_section', $request->id)->first();
+        return view('site.section.update')->with(compact('section'));
+    }
+    public function store_update(Request $request){
+        $update_sec = new update_section();
+            if($update_sec->update($request)){
+                $request->session()->flash(
+                    'message',"Seção {$request->name} atualizada com sucesso.",
+                    'message_class',"success",
+                );
+            }else{
+                $request->session()->flash(
+                    'message',"Seção {$request->name} não foi atualizada.",
+                    'message_class',"danger",
+                );
+            }
+        return redirect()->route('list_section');
     }
     public function destroy(Request $request)
     {

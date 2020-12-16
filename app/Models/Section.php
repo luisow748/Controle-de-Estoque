@@ -11,6 +11,7 @@ class Section extends Model
 
     protected $fillable = ['name', 'description'];
     protected $table = 'sections';
+    protected $primaryKey ='id_section';
 
     public function categories()
     {

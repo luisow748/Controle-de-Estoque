@@ -25,7 +25,16 @@
     tippy('#editCat', {
         content: 'Editar Categoria',
     });
-    tippy('#addSubCat', {
-        content: 'Adicionar Subcategoria',
+    tippy('#addCat', {
+        content: 'Adicionar Categoria na Seção',
+    });
+    tippy('#acessSection', {
+        content: 'Acessar Seção',
+    });
+    tippy('#addSection', {
+        content: 'Adicionar Seção',
+    });
+    tippy('#editSection', {
+        content: 'Editar Seção',
     });
 </script>

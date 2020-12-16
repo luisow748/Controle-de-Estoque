@@ -68,7 +68,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/secoes', [SectionController::class, 'index'])->name('list_section');
     Route::get('/secoes/criar', [SectionController::class, 'create'])->name('form_create_section');
     Route::post('secoes/criar', [SectionController::class, 'store']);
-    Route::get('/secoes/editar', [SectionController::class, 'update'])->name('form_edit_section');
+    Route::get('/secoes/editar/{id}', [SectionController::class, 'update'])->name('form_edit_section');
+    Route::post('/secoes/editar/{id}', [SectionController::class, 'store_update']);
     Route::delete('/secoes/{id}', [SectionController::class, 'destroy']);
 
     //CATEGORIAS
@@ -77,8 +78,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/categorias/{id}/items', [ItemController::class, 'listItemsFromCategory'])
         ->name('list_items_from_category');
     Route::get('/categorias/criar', [CategoryController::class, 'create'])->name('form_create_category');
+    Route::post('/categorias/criar/{id}', [CategoryController::class, 'createCatWithSection'])->name('form_create_category_with_section');
     Route::post('categorias/criar', [CategoryController::class, 'store']);
     Route::get('/categorias/editar/{id}', [CategoryController::class, 'update'])->name('form_edit_category');
+    Route::post('/categorias/editar/{id}', [CategoryController::class, 'update_store_category']);
     Route::delete('/categorias/{id}', [CategoryController::class, 'destroy']);
 
 

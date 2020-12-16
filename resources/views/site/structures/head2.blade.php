@@ -11,13 +11,13 @@ $caminho_absoluto = '/';
     <meta name='description' content=''>
 
 {{--    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
-    <title> {{$var['nome_app']}} </title>
+    <title> {{config('variaveis.nome_app')}} </title>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
     @livewireStyles
 {{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
 
     <link rel='shortcut icon' href="{{asset('icon.ico')}}">
-    <link href='{!! asset('assets/dist/css/font_awesome/all.css') !!}' rel='stylesheet'> <!--load all styles -->
+    <link href='{{ asset('assets/dist/css/font_awesome/all.css') }}' rel='stylesheet'> <!--load all styles -->
 
     <link rel='canonical' href='https://getbootstrap.com/docs/4.5/examples/offcanvas/'>
 {{--    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>--}}

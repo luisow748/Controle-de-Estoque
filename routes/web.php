@@ -33,6 +33,7 @@ Route::post('/registrar', [EnterController::class, 'store'])->name('register');
 Route::middleware(['auth'])->group(function () {
     //Reports
     Route::get('/reports', [IndexController::class, 'reports']);
+    Route::get('/consultas', [IndexController::class, 'consultas']);
 
     //Admin
     Route::get('/admin', [AdminController::class, 'index']);
@@ -56,7 +57,7 @@ Route::middleware(['auth'])->group(function () {
         ->name('form_create_item');
     Route::get('items/criar/{categoria}', [ItemController::class, 'createWithCategory'])
         ->name('form_create_item_with_category');
-    Route::get('items/mostrar/{id}', [ItemController::class, 'show']);
+    Route::get('items/mostrar/{id}', [ItemController::class, 'show'])->name('show-item');
 
     Route::post('items/criar', [ItemController::class, 'store'])->name('store_item');
     //Route::get('/items/{id}', [ItemController::class, 'show']); //SHOW

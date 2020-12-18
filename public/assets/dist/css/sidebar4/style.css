@@ -8209,6 +8209,7 @@ h1, h2, h3, h4, h5,
     #sidebar.active .custom-menu {
       margin-right: -50px; }
   #sidebar h1 {
+    margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 20px; }

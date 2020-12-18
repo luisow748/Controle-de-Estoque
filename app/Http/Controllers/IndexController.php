@@ -104,4 +104,7 @@ class IndexController extends Controller
     public function func(){
         return view('site.index.func');
     }
+    public function consultas(){
+        return view('site.index.consulta');
+    }
 }

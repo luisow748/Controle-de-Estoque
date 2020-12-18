@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-
+        return view('site.admin.users.index');
     }
 
     public function create()

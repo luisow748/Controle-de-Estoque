@@ -50,6 +50,10 @@ $user = Auth::user();
                                 <a href="/funcionalidades" class="btn btn-success btn-block mb-4">Confira todas as possibilidades.</a>
                         </div>
 
+                        <div class='index-item'>
+                            <livewire:contact-search-bar />
+                        </div>
+
                 </div>
         {{-- </div> --}}
 

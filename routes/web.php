@@ -65,6 +65,7 @@ Route::middleware(['auth'])->group(function () {
     //Route::get('/items/{id}', [ItemController::class, 'show']); //SHOW
     Route::post('/items/editar/{id}', [ItemController::class, 'update'])->name('update_item');
     Route::get('/items/editar/{id}', [ItemController::class, 'edit'])->name('form_update_item');
+    Route::post('items/baixar/{id}', [ItemController::class, 'leave'])->name('leave_item');
     Route::delete('/items/{id}', [ItemController::class, 'destroy']);
 
     //Seções
@@ -82,7 +83,7 @@ Route::middleware(['auth'])->group(function () {
         ->name('list_items_from_category');
     Route::get('/categorias/criar', [CategoryController::class, 'create'])->name('form_create_category');
     Route::post('/categorias/criar/{id}', [CategoryController::class, 'createCatWithSection'])->name('form_create_category_with_section');
-    Route::post('categorias/criar', [CategoryController::class, 'store']);
+    Route::post('categorias/criar', [CategoryController::class, 'store'])->name('category_store');
     Route::get('/categorias/editar/{id}', [CategoryController::class, 'update'])->name('form_edit_category');
     Route::post('/categorias/editar/{id}', [CategoryController::class, 'update_store_category']);
     Route::delete('/categorias/{id}', [CategoryController::class, 'destroy']);

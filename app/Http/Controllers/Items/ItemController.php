@@ -76,6 +76,19 @@ class ItemController extends Controller
         return redirect()->route('list_items');
     }
 
+    public function leave(Request $request){
+        DB::beginTransaction();
+        $item = Item::find($request->id);
+        $item->qty = 0;
+        $item->save();
+        DB::commit();
+        $request->session()->flash(
+            'message',"Item {$item->id} ({$item->name}) baixado com sucesso. Quantidade atual: {$item->qty}."
+
+        );
+        return redirect()->route('list_items');
+    }
+
 
 
 

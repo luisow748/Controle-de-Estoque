@@ -28,9 +28,10 @@ class UserController extends Controller
 
     }
 
-    public function show()
+    public function show(Request $request)
     {
-
+        $u = User::find($request->id);
+        return view('site.admin.users.show')->with(compact('u'));
     }
 
     public function userArea()

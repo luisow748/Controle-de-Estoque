@@ -50,7 +50,7 @@ public function createCatWithSection(Request $request){
         DB::commit();
 
         $request->session()->flash(
-            'message',"Categoria [{$category->id_category}] ({$category->name}) criada com sucesso"
+            'message',"Categoria {$category->id_category} ( {$category->name} ) criada com sucesso na seção \"{$category->section_name}\""
         );
         return redirect()->route('list_category');
     }

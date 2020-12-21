@@ -1,8 +1,8 @@
 
 
-@extends('layout')
+@extends('site.admin.layout')
 @section('title')
-    Itens do Estoque
+    Registro
 @endsection
 
 @section('header')

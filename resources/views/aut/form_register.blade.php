@@ -1,10 +1,10 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-
+            <h3>Digite os dados para registrar um novo usuário:</h3>
         </x-slot>
 
-        <x-jet-validation-errors class="mb-4" />
+        <x-jet-validation-errors class="" />
 
 
 <form method="POST" action="{{ route('register') }}">
@@ -30,6 +30,13 @@
         <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation"
                      required autocomplete="new-password" />
     </div>
+
+    <div class="mt-4">
+        <input id="is_admin" class="mt-1 mr-2" type="checkbox" name="is_admin" value=1 />
+        <label for="is_admin" value=""> {{ __('Administrador') }}</label>
+
+    </div>
+
 
     <div class="flex items-center justify-end mt-4">
         <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">

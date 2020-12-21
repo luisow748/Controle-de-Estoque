@@ -27,17 +27,19 @@ Route::get('/funcionalidades', [IndexController::class, 'func']);
 //Aut
 Route::get('/entrar', [EnterController::class, 'index'])->name('form_enter');
 Route::post('/entrar', [EnterController::class, 'enter'])->name('enter');
-Route::get('/registrar', [EnterController::class, 'create'])->name('form_register');
-Route::post('/registrar', [EnterController::class, 'store'])->name('register');
+
 
 Route::middleware(['auth'])->group(function () {
+
+    Route::get('/registrar', [EnterController::class, 'create'])->name('form_register');
+    Route::post('/registrar', [EnterController::class, 'store'])->name('register');
     //Reports
     Route::get('/reports', [IndexController::class, 'reports']);
     Route::get('/consultas', [IndexController::class, 'consultas']);
 
     //Admin
     Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/admin/usuarios', [UserController::class, 'index'])->name('list_users');
+    Route::get('/admin/usuarios', [UserController::class, 'list_users'])->name('list_users');
     Route::get('/admin/usuarios/criar', [UserController::class, 'create'])->name('create_users');
     Route::post('/admin/usuarios/criar', [UserController::class, 'store'])->name('store_users');
     Route::get('/admin/usuarios/{id}', [UserController::class, 'show'])->name('show_user');

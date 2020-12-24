@@ -22,10 +22,7 @@ body::after{
     position: absolute;
     z-index: -1;
 }
-h1, h2, h3{
-    color: black;
 
-}
 .index.item > h1, .index-item > h2, .index-item > h3{
 background-color: transparent;
 -webkit-box-shadow: 0px 0px 0px 0px rgba(82,82,82,0.00);
@@ -38,6 +35,10 @@ box-shadow: 0px 0px 0px 0px rgba(82,82,82,0.00);
     padding: 10px 10px 10px 10px;
     -webkit-box-shadow: 2px 2px 8px 3px rgba(82,82,82,0.56);
 box-shadow: 2px 2px 8px 3px rgba(82,82,82,0.56);
+}
+h1, h2, h3{
+    color: black;
+
 }
 .btn-shadow{
     -webkit-box-shadow: 2px 2px 8px 3px rgba(82,82,82,0.56);
@@ -120,27 +121,29 @@ box-shadow: 2px 2px 8px 3px rgba(0, 128, 255, 0.40);
 
 .index-container{
 
-    /* background-color: #EBEBEB; */
+    background-color: transparent;
     /* -webkit-box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65);
     box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65); */
     width: 100%;
-    /* padding: 15px; */
+    padding: 2px;
+    /* height: 100%; */
+    border-radius: 10px;
 }
 .index-item{
 background-color: #fbfbfb;
-max-width: 560px;
-    min-width: 440px;
-max-height: 300px;
+/* max-width: 560px; */
+    /* min-width: 440px; */
+    width: 100%;
+max-height: 400px;
 overflow-y: auto;
 overflow-x: auto;
-margin: 10px 10px 10px 10px;
+margin: 8px 0px 4px 0px;
 float: left;
-border: 1px solid  #E4E4E4;
+/* border: 1px solid  #E4E4E4; */
 border-radius: 10px;
-padding: 10px;
-
-    -webkit-box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
-    box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
+padding: 15px;
+-webkit-box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
+box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
 }
 .index-item::after, .index-item::before{
   content: "";
@@ -177,4 +180,8 @@ padding: 10px;
 .tabela-usuarios a{
 
     color:rgb(49, 43, 226);
+}
+.shadow{
+    -webkit-box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
+    box-shadow: 0px 4px 9px 4px rgba(92,92,92,0.40);
 }

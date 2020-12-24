@@ -1,18 +1,17 @@
-.grid-container {
+/* .grid-container {
     display: grid;
     grid-template-columns: 0.5fr 3.5fr 0.5fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px 10px;
+    gap: 4px 4px;
     grid-template-areas:
       "margem_esquerda centro_superior margem_direita"
       "margem_esquerda centro_inferior margem_direita";
   }
-  
+
   .margem_esquerda { grid-area: margem_esquerda; }
-  
+
   .margem_direita { grid-area: margem_direita; }
-  
+
   .centro_superior { grid-area: centro_superior; }
-  
-  .centro_inferior { grid-area: centro_inferior; }
-  
+
+  .centro_inferior { grid-area: centro_inferior; } */

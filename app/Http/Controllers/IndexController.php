@@ -17,8 +17,9 @@ class IndexController extends Controller
      */
     public function index()
     {
+        $category = Category::query()->get();
 
-        return view('site.index.index', ['section' => 'index']);
+        return view('site.index.index')->with(compact('category'));
     }
 
     public function reports()

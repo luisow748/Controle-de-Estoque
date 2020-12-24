@@ -1,5 +1,5 @@
-<div class="relative">
-    <h3>Pesquisa por item</h3>
+<div class="relative index-item">
+    <h6 class='block'>Pesquisa por item</h6>
     Digite o nome ou algo sobre a descrição de um item:
     <input
         type="text"

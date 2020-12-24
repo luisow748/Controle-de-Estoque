@@ -19,12 +19,12 @@ $caminho_absoluto = '/';
     <link rel='shortcut icon' href="{{asset('icon.ico')}}">
     <link href='{{ asset('assets/dist/css/font_awesome/all.css') }}' rel='stylesheet'> <!--load all styles -->
 
-    <link rel='canonical' href='https://getbootstrap.com/docs/4.5/examples/offcanvas/'>
+    {{-- <link rel='canonical' href='https://getbootstrap.com/docs/4.5/examples/offcanvas/'> --}}
 {{--    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>--}}
     <!-- <link rel='canonical' href='https://getbootstrap.com/docs/4.5/examples/floating-labels/'> -->
     <!-- Bootstrap core CSS -->
 
-    <link href='{{ asset('assets/dist/css/bootstrap.css') }}' rel='stylesheet'>
+    {{-- <link href='{{ asset('assets/dist/css/bootstrap.css') }}' rel='stylesheet'> --}}
 
 
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
@@ -33,7 +33,8 @@ $caminho_absoluto = '/';
 
     <link rel='stylesheet' href='{{asset('assets/dist/css/sidebar4/style.css')}}'> <!-- Sidebar 4 -->
     <link rel='stylesheet' href='{{asset('offcanvas.css')}}'>
-
+    <link rel='stylesheet' href='{{asset('assets/dist/css/responsivo.css')}}'>
+    <link rel="stylesheet" href="{{asset('assets/dist/css/items/index.css')}}">
 
     <style>
         .bd-placeholder-img {

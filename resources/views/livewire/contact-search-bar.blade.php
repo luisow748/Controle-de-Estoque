@@ -1,4 +1,4 @@
-<div class="relative index-item">
+<div class="relative">
     <h6 class='block'>Pesquisa por item</h6>
     Digite o nome ou algo sobre a descrição de um item:
     <input
@@ -26,10 +26,10 @@
                     <a class='list-item-consulta' href='items/mostrar/{{$contact['id']}}'
                         {{-- href="{{ route('show-item', $contact['id']) }}" --}}
                         {{-- class="list-item {{ $highlightIndex === $i ? 'highlight' : '' }}" --}}
-                    >{{ $contact['name'] }}</a>
+                    > {{$contact['id']}}- {{ $contact['name'] }}</a>
                 @endforeach
             @else
-                <div class="list-item warning">Nenhum item encontrado.</div>
+                <div class="list-item-warning">Nenhum item encontrado.</div>
             @endif
         </div>
     @endif

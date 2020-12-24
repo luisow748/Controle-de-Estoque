@@ -18,13 +18,20 @@ $user = Auth::user();
 <div class="grid-container">
     <div class="c1">
         <div class='index-container shadow rounded'>
+
+            <a href="{{route('form_create_item')}}"
+                class="btn btn-secondary mb-3 btn-shadow btn-block">Adicionar novo Item </a>
+
             <div class="index-item">
+
+
+                <livewire:contact-search-bar />
+                {{-- Coluna 01 <br>
                 Coluna 01 <br>
                 Coluna 01 <br>
                 Coluna 01 <br>
                 Coluna 01 <br>
-                Coluna 01 <br>
-                Coluna 01 <br>
+                Coluna 01 <br> --}}
             </div>
         </div>
 
@@ -44,7 +51,7 @@ $user = Auth::user();
 
                         <a href="/funcionalidades" class="btn btn-info btn-block mb-4">Conheça as funcionalidades!</a> --}}
                         {{-- <div class='index-item'> --}}
-                            <livewire:contact-search-bar />
+
                         {{-- </div> --}}
                 </div>
 
@@ -79,7 +86,7 @@ $user = Auth::user();
                 </div>
                 @endforeach
                 <a href="{{route('form_create_item')}}"
-                class="btn btn-secondary m-4 btn-shadow">Adicionar novo Item </a>
+                class="btn btn-secondary m-4 btn-shadow btn-block">Adicionar novo Item </a>
             </div>
 
 
@@ -89,14 +96,9 @@ $user = Auth::user();
 
     <div class="c3">
 
-            <div class="index-item">
-                Coluna 03 <br>
-                Coluna 03 <br>
-                Coluna 03 <br>
-                Coluna 03 <br>
-                Coluna 03 <br>
-                Coluna 03 <br>
-            </div>
+
+               @include('site.index.column_actions')
+
 
     </div>
 </div>

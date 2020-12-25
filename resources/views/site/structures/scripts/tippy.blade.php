@@ -37,4 +37,13 @@
     tippy('#editSection', {
         content: 'Editar Seção',
     });
+    tippy('#dropUser', {
+        content: 'Excluir usuário',
+    });
+    tippy('#editUser', {
+        content: 'Editar usuário',
+    });
+    tippy('#acessUser', {
+        content: 'Acessar usuário',
+    });
 </script>

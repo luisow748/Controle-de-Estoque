@@ -6,7 +6,7 @@
 
         <div class="item">
 
-            <h3>Listagem de usuários</h3>
+            <h4>Listagem de usuários</h4>
             <table class="table table-striped  table-hover table-bordered tabela-usuarios">
                 <thead>
                     <tr>
@@ -14,6 +14,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">E-mail</th>
                         <th scope="col">Administrador?</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +35,10 @@
                                 @else
                                 Não
                                 @endif
+                            </td>
+
+                            <td>
+                                @include('site.admin.users.actions-users')
                             </td>
                         </tr>
 

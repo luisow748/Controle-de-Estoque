@@ -6,7 +6,7 @@
 
     <div class="item">
 
-        <h3>Dados do usuário</h3>
+        <h4>Dados do usuário</h4>
         <table class="table table-striped  table-hover table-bordered tabela-usuarios ">
             <thead>
                 <tr>
@@ -44,7 +44,7 @@
         </table>
 
                 <div>
-                    <a class='btn btn-sm btn-info shadow' href='/admin/usuarios'>Retornar à lista de usuários</a>
+                   @include('site.structures.buttons.btn-list-users')
                 </div>
     </div>
 </div>

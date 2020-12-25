@@ -1,6 +1,6 @@
 
 <div class="index-container">
-    <h3 class="text-justify left"> Edite o Item: {{ $items->name }}.</h3>
+    <h4 class="text-justify left p-2"> Edite o Item: {{ $items->name }}.</h4>
     <div class="table-responsive index-item">
 
         <form action='/items/editar/{{ $items->id }}' method="post">

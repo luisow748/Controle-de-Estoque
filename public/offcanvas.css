@@ -113,7 +113,7 @@ box-shadow: 2px 2px 8px 3px rgba(0, 128, 255, 0.40);
     /* -webkit-box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65);
     box-shadow: 4px 4px 7px 0px rgba(62,62,62,0.65); */
     width: 100%;
-    padding: 3px;
+    padding: 4px;
     height: 100%;
     border-radius: 4px;
 }

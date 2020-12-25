@@ -40,14 +40,17 @@ Route::get('/funcionalidades', [IndexController::class, 'func']);
 
     //Admin
     Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/admin/usuarios', [UserController::class, 'list_users'])->name('list_users');
-    Route::get('/admin/usuarios/criar', [UserController::class, 'create'])->name('create_users');
-    Route::post('/admin/usuarios/criar', [UserController::class, 'store'])->name('store_users');
-    Route::get('/admin/usuarios/{id}', [UserController::class, 'show'])->name('show_user');
-    Route::get('/admin/usuarios/editar', [UserController::class, 'update'])->name('create_users');
-    Route::delete('/admin/usuarios/{id}', [UserController::class, 'destroy'])->name('delete_user');
 
-    //Users
+        //Users
+        Route::get('/admin/usuarios', [UserController::class, 'list_users'])->name('list_users');
+        Route::get('/admin/usuarios/criar', [UserController::class, 'create'])->name('create_users');
+        Route::post('/admin/usuarios/criar', [UserController::class, 'store'])->name('store_users');
+        Route::get('/admin/usuarios/{id}', [UserController::class, 'show'])->name('show_user');
+        Route::get('/admin/usuarios/editar/{id}', [UserController::class, 'update'])->name('update_users');
+        Route::post('/admin/usuarios/editar/{id}', [UserController::class, 'store_update'])->name('store_update_users');
+        Route::delete('/admin/usuarios/{id}', [UserController::class, 'destroy'])->name('delete_user');
+
+
     Route::get('admin/area_usuario', [UserController::class, 'userArea']);
 
 

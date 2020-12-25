@@ -42,6 +42,8 @@ $user = Auth::user();
         <div class='index-container shadow rounded'>
 
                 <div class="" >
+                    <a href="{{route('form_create_item')}}"
+            class="btn btn-secondary mb-3 btn-shadow btn-block">Adicionar novo Item </a>
                     {{-- @if(Auth::user())
                         <h3>Bem vindo, {{ $user->name }}.</h3>
                     @endif --}}
@@ -82,11 +84,11 @@ $user = Auth::user();
                 <div class="index-item">
 
                     <livewire:items-list :category="$cat"/>
+                    {{-- @include('site.index.column_categories') --}}
 
                 </div>
                 @endforeach
-                <a href="{{route('form_create_item')}}"
-                class="btn btn-secondary m-4 btn-shadow btn-block">Adicionar novo Item </a>
+
             </div>
 
 

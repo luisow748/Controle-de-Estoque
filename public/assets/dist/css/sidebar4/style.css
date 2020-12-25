@@ -2485,6 +2485,7 @@ fieldset:disabled a.btn {
 
 .btn-block {
   display: block;
+  max-height: fit-content;
   width: 100%; }
   .btn-block + .btn-block {
     margin-top: 0.5rem; }

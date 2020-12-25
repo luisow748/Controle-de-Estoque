@@ -19,10 +19,7 @@ use App\Http\Controllers\Admin\{AdminController, UserController};
 |
 */
 // INDEX
-Route::get('/', [IndexController::class, 'index']);
-Route::get('/index', [IndexController::class, 'index'])->name('index');
-Route::get('/teste', [IndexController::class, 'teste']);
-Route::get('/funcionalidades', [IndexController::class, 'func']);
+
 
 //Aut
 Route::get('/entrar', [EnterController::class, 'index'])->name('form_enter');
@@ -30,6 +27,10 @@ Route::post('/entrar', [EnterController::class, 'enter'])->name('enter');
 
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/', [IndexController::class, 'index']);
+Route::get('/index', [IndexController::class, 'index'])->name('index');
+Route::get('/teste', [IndexController::class, 'teste']);
+Route::get('/funcionalidades', [IndexController::class, 'func']);
 
     Route::get('/registrar', [EnterController::class, 'create'])->name('form_register');
     Route::post('/registrar', [EnterController::class, 'store'])->name('register');

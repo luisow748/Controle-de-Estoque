@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Classes\Structure\Sidebar;
 use App\Models\Category;
+use App\Models\Section;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,8 +19,9 @@ class IndexController extends Controller
     public function index()
     {
         $category = Category::query()->get();
+        $section = Section::query()->get();
 
-        return view('site.index.index')->with(compact('category'));
+        return view('site.index.index')->with(compact('category', 'section'));
     }
 
     public function reports()

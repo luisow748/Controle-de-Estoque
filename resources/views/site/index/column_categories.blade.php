@@ -1,28 +1,73 @@
+<?php
+use App\Models\Category;
+
+?>
+
 <div id="accordion">
-    <div class="card">
+    <div class="index-container">
+        Pesquisa por:<br>
+        Seção -> Categoria
+
+        @foreach ($section as $s)
+
+
+            <div class="card">
+                <div class="card-header" id="heading{{$s->id_section}}">
+                    <div class="mb-0">
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapse{{$s->id_section}}" aria-expanded="false"
+                            aria-controls="collapse{{$s->id_section}}">
+
+                            <span>{{$s->id_section}} - {{$s->name}} </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="collapse{{$s->id_section}}" class="collapse" aria-labelledby="heading{{$s->id_section}}" data-parent="#accordion">
+                    <div class="card-body">
+                        <table class="table table-hover table-sm bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Categoria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                        @foreach (Category::where('section_id', $s->id_section)
+                        ->get(); as $c)
+
+                            <tr>
+                                <th scope="row">{{$c->id_category}}</th>
+                                <td>
+                                    <a href=''>
+                                        {{$c->name}}
+                                    </a>
+                                </td>
+                            </tr>
+
+                        @endforeach
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        @endforeach
+
+
+    </div> <!-- fecha accordion -->
+</div> <!--Fecha container -->
+
+    {{-- <div class="card">
         <div class="card-header" id="headingOne">
             <h5 class="mb-0">
                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
                     aria-controls="collapseOne">
 
-                    <h5> {{ $category->name }} <a href="/items/criar/{{ $category->id_category }}" class="ml-2 info"><i
-                                class='far fa-plus-square'></i> </a></h5>
-                    <table class="table table-sm table-bordered bg-white rounded shadow table-hover text-center">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th style="width: 30px" scope="col">Cód.</th>
-                                <th style="width: 200px" scope="col">Nome</th>
-                                <th style="width: 80px" scope="col">Qde/Mín. </th>
-
-                                {{-- <th style="width: 150px" scope="col">Categoria</th>
-                                --}}
-
-                                <th style="width: 180px" scope="col" class="justify-center">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-
+                    <h6> Nome da Seção </h6>
                 </button>
             </h5>
         </div>
@@ -33,6 +78,7 @@
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
@@ -72,5 +118,5 @@
                 aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
             </div>
         </div>
-    </div>
-</div>
+    </div> --}}
+

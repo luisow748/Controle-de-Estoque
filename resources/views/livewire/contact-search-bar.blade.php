@@ -23,10 +23,10 @@
         <div class="absolute z-10 list-group bg-white w-full rounded-t-none shadow-lg">
             @if(!empty($contacts))
                 @foreach($contacts as $i => $contact)
-                    <a class='list-item-consulta' href='items/mostrar/{{$contact['id']}}'
+                    <a class='list-item-consulta' href='items/mostrar/{{$contact['id']}}'>
                         {{-- href="{{ route('show-item', $contact['id']) }}" --}}
                         {{-- class="list-item {{ $highlightIndex === $i ? 'highlight' : '' }}" --}}
-                    > {{$contact['id']}}- {{ $contact['name'] }}</a>
+                     {{$contact['id']}}- {{ $contact['name'] }}</a>
                 @endforeach
             @else
                 <div class="list-item-warning">Nenhum item encontrado.</div>

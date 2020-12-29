@@ -5,8 +5,9 @@ use App\Models\Category;
 
 <div id="accordion">
     <div class="index-container">
-        Pesquisa por:<br>
-        Seção -> Categoria
+
+        <h6 class='pt-2 text-center'>Pesquisa por:<br>
+        Seção > Categoria</h6>
 
         @foreach ($section as $s)
 
@@ -25,7 +26,7 @@ use App\Models\Category;
                 <div id="collapse{{$s->id_section}}" class="collapse" aria-labelledby="heading{{$s->id_section}}" data-parent="#accordion">
                     <div class="card-body">
                         <table class="table table-hover table-sm bordered">
-                            <thead>
+                            <thead class=''>
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Categoria</th>
@@ -37,9 +38,9 @@ use App\Models\Category;
                         ->get(); as $c)
 
                             <tr>
-                                <th scope="row">{{$c->id_category}}</th>
+                                <th scope="row">{{$c->id_category}}-</th>
                                 <td>
-                                    <a href=''>
+                                    <a href='/index/categoria/{{$c->id_category}}'>
                                         {{$c->name}}
                                     </a>
                                 </td>

@@ -20,7 +20,9 @@ use App\Models\Item;
 
 <h3>Items por Categoria:</h3>
 
-<a href="{{route('form_create_item')}}" class="btn btn-secondary ml-2 mb-2 btn-shadow">Adicionar novo Item </a>
+
+@include('site.structures.buttons.btn-add-item')
+@include('site.structures.buttons.btn-index')
 
     <div class="d-flex flex-row flex-wrap mb-3 index-container">
 

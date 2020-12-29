@@ -1,5 +1,9 @@
+<label for="category" class="">
+    Categoria
+    <span id="contentLoading">
+        <span id="loading"></span>
+    </span>
+</label>
+<div id="MostraPesq">
 
-<div class="col-3 border  rounded m-1"> <!-- Categoria -->
-    <label for="category" class="">Categoria</label>
-    <div id="MostraPesq"></div>
 </div>

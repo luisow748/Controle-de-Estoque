@@ -1,11 +1,11 @@
 
 <div class="index-container">
     <h4 class="text-justify left p-2"> Edite o Item: {{ $items->name }}.</h4>
-    <div class="table-responsive index-item">
+    <div class=" index-item">
 
         <form action='/items/editar/{{ $items->id }}' method="post">
             @csrf
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover table-bordered table-responsive">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">Cód.</th>
@@ -46,7 +46,7 @@
             <button class=" btn btn-sm mb-4 btn-primary" type="submit">Enviar</button>
         </form>
 
-
+        <a href='/index'>Voltar para o início</a>
         {{-- <table class="table table-bordered">
             <tbody>--}}
                 {{-- <td class="table-info"></td>

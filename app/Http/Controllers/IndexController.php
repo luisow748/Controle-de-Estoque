@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use App\Classes\Structure\Sidebar;
 use App\Models\Category;
 use App\Models\Section;
@@ -23,7 +24,13 @@ class IndexController extends Controller
 
         return view('site.index.index')->with(compact('category', 'section'));
     }
-
+    public function show_category(Request $request)
+    {
+        $section = Section::query()->get();
+        $cat = Category::find($request->id);
+        $items = Item::where('category_id', $request->id)->get();
+        return view('site.index.index')->with(compact('cat', 'items', 'section'));
+    }
     public function reports()
     {
         return view('site.index.index', ['section' => 'reports ']);

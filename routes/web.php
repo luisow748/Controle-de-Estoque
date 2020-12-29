@@ -29,7 +29,7 @@ Route::post('/entrar', [EnterController::class, 'enter'])->name('enter');
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [IndexController::class, 'index']);
 Route::get('/index', [IndexController::class, 'index'])->name('index');
-Route::get('/teste', [IndexController::class, 'teste']);
+Route::get('/index/categoria/{id}', [IndexController::class, 'show_category']);
 Route::get('/funcionalidades', [IndexController::class, 'func']);
 
     Route::get('/registrar', [EnterController::class, 'create'])->name('form_register');

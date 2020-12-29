@@ -5,7 +5,7 @@ $url = $var['caminho_absoluto'];
 
 ?>
 
-@extends('layout')
+@extends('layout_sidebar')
 @section('title')
 
 @endsection
@@ -15,24 +15,26 @@ $url = $var['caminho_absoluto'];
 @endsection
 
 @section('content')
+<div class="index-container ">
 
     <div class="card text-center">
         <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
+            <ul class="nav nav-tabs card-header-tabs p-2">
+
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#show">Visualizar Item</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#edit">Editar Item</a>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" data-toggle="tab" href="#" tabindex="-1" >Disabled</a>--}}
-{{--                </li>--}}
+
             </ul>
         </div>
+
         <div class="card-body">
 
             <div id="myTabContent" class="tab-content">
+
                 <div class="tab-pane fade show active" id="show">
 
                     @include('site.items.form_show')
@@ -50,7 +52,7 @@ $url = $var['caminho_absoluto'];
         </div>
     </div>
 
-
+</div>
 
 
 

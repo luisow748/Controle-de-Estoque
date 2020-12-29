@@ -1,4 +1,4 @@
-<div class="col-3 border  rounded m-1">
+
     <!-- Seção -->
     <label for="section" class="">Seção</label>
     <select  class="form-control" name="section" id="section" >
@@ -8,4 +8,4 @@
         @endforeach
     </select>
 
-</div>
+

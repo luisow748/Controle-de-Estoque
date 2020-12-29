@@ -19,11 +19,9 @@ $user = Auth::user();
     <div class="c1">
         <div class='index-container shadow rounded'>
 
-            <a href="{{route('form_create_item')}}"
-                class="btn btn-secondary mb-3 btn-shadow btn-block">Adicionar novo Item </a>
+            @include('site.structures.buttons.btn-add-item')
 
             <div class="index-item">
-
 
                 <livewire:contact-search-bar />
 
@@ -33,31 +31,18 @@ $user = Auth::user();
     </div>
 
     <div class="c2">
-        <!-- Page Content  -->
-        <div class='index-container shadow rounded'>
+    <!-- Page Content  -->
+        @if(isset($cat))
+            @include('site.items.list-items-from-category')
+        @else
+            @include('site.index.welcome')
+        @endif
 
-Categoria Selecionada
-
-            {{-- <div class="d-flex flex-row flex-wrap index-container rounded">
-
-                @foreach($category as $cat)
-                <div class="index-item">
-
-                    <livewire:items-list :category="$cat"/>
-
-                </div>
-                @endforeach
-
-            </div> --}}
-
-
-
-        </div>
     </div>
 
     <div class="c3">
 
-               @include('site.index.column_categories')
+        @include('site.index.column_categories')
 
     </div>
 </div>

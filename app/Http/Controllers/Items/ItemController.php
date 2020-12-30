@@ -56,10 +56,12 @@ class ItemController extends Controller
 
     public function store(ItemsFormRequest $request)
     {
-        $item = Item::create($request->all()); //cria novo item
-        $Categoria = Category::find($request->category_id); // seleciona a categoria à qual pertence
-        $item->category = "$Categoria->name"; // atualiza o campo categoria do item criado
-        $item->save(); // salva a alteração
+        DB::beginTransaction();
+            $Categoria = Category::find($request->category_id); // seleciona a categoria à qual pertence
+            $item = Item::create($request->all()); //cria novo item
+            $item->category = "$Categoria->name"; // atualiza o campo categoria do item criado
+            $item->save(); // salva a alteração
+        DB::commit();
         $request->session()->flash(
             'message',"Item {$item->id} ({$item->name}) criado com sucesso na categoria {$Categoria->name}"
         );

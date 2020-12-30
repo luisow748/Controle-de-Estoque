@@ -11,8 +11,10 @@
                     <h6>Informações Básicas</h6>
                     <label for="name" class="">Código / SKU:</label>
                     <input type="number" placeholder="Cód." class="form-control" name="cod" id="cod">
-                    <label for="name" class="">Nome: ( <span class='text-danger'>*</span> )</label>
+
+                    <label for="name" class="">Nome: ( <span class='text-danger'>*</span> ) </label>
                     <input type="text" placeholder="Nome" class="form-control" name="name" id="name">
+
                     <label for="description" class="">Descrição:</label>
                     <input type="text" placeholder="Descrição do item" class="form-control" name="description"
                         id="description">
@@ -22,6 +24,8 @@
                     <label for="new_price" class="">Preço de venda:</label>
                     <input type="text" placeholder="Preço atualizado (R$)" class="form-control" name="new_price"
                         id="new_price">
+
+
                 </div>
 
                 <div class="a2">
@@ -37,7 +41,7 @@
                         {{-- Se não estiver vindo, mostra os formulários para selecionar a
                         seção e
                         categoria--}}
-
+                        <input hidden name="category_id" value="1"> {{-- Se não for edição, coloca 1 como valor padrão e depois atualizará --}}
                         @include('site.structures.forms.select_section')
 
                         @include('site.structures.forms.select_category')

@@ -15,6 +15,7 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('cod');
             $table->timestamps(); //created_at e updated_at
             $table->string('name');
             $table->string('photo_name')->nullable();
@@ -24,6 +25,7 @@ class CreateItemsTable extends Migration
             $table->decimal('paid_price', 5, 2)->nullable();
             $table->decimal('new_price', 5, 2)->nullable();
             $table->string('category')->nullable();
+
             $table->string('location')->nullable();
             $table->string('pb')->nullable();
             $table->string('pl')->nullable();
@@ -34,7 +36,7 @@ class CreateItemsTable extends Migration
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
             $table->string('tax-type')->nullable();
-            $table->boolean('st')->nullable();
+            $table->string('st')->nullable();
 
             $table->unsignedBigInteger('category_id');
 

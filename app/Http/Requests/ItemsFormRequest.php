@@ -21,7 +21,7 @@ class ItemsFormRequest extends FormRequest
     {
         return [
             'name' => 'required|min:2',
-            'description' => 'required',
+            // 'description' => 'required',
 
            // 'qty' => 'required',
             //'minimum_qty' => 'required',

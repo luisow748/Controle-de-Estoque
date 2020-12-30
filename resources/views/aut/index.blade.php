@@ -14,10 +14,12 @@
         </div>
     @endif
     @include('site.validation.errors')
+
     @if(!empty($message))
     <div class="alert alert-success">
         {{$message}}
     </div>
+    @endif
     {{-- <div class="index-container"> --}}
         <div class="index-login">
             <form method="POST" action="{{ route('login') }}">

@@ -97,7 +97,9 @@ class ItemController extends Controller
     public function edit(int $id)
     {
         $items = Item::find($id);
-        return view('site.items.edit')->with(compact('items'));
+        $categoria = $items->category;
+        $categoria_id = $items->category_id;
+        return view('site.items.edit')->with(compact('items', 'categoria', 'categoria_id'));
     }
 
 
@@ -105,13 +107,7 @@ class ItemController extends Controller
     {
         DB::beginTransaction();
         $item = Item::find($id);
-
-        $item->name = $request->name;
-        $item->description = $request->description;
-        $item->qty = $request->qty;
-        $item->minimum_qty = $request->minimum_qty;
-        $item->paid_price = $request->paid_price;
-        $item->new_price = $request->new_price;
+        $item->update($request->all());
         $item->save();
         DB::commit();
 

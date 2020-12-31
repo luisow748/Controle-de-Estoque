@@ -1,8 +1,8 @@
+@extends('layout_sidebar')
 
-@extends('layout')
-@section('title')
-
-@endsection
+    @section('title')
+        Formulário edição itens
+    @endsection
 
 @section('header')
 
@@ -10,6 +10,16 @@
 
 @section('content')
 
-    @include('site.items.form_edit')
+
+{{--    Inclui a view que mostra os erros--}}
+    @include('site.validation.errors')
+
+
+
+    <div class="index-container ">
+      <h5> Editar item: {{ $items->name }}</h5>
+
+    {{-- @include('site.items.form_edit') --}}
+    @include('site.items.form-insert-general')
 
 @endsection

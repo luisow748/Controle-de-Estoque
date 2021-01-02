@@ -34,7 +34,9 @@ class ItemController extends Controller
     public function show(Request $request)
     {
         $items = DB::table('items')->find($request->id);
-        return view('site.items.show', compact('items'));
+        $categoria = $items->category;
+        $categoria_id = $items->category_id;
+        return view('site.items.show', compact('items', 'categoria', 'categoria_id'));
     }
 
     public function create(Request $request)
@@ -47,9 +49,9 @@ class ItemController extends Controller
     public function createWithCategory(Request $request)
     {
         $categoria = Category::find($request->categoria);
+        $categoria_id = $categoria->category_id;
 
-
-        return view('site.items.create')->with(compact( 'categoria'));
+        return view('site.items.create')->with(compact( 'categoria', 'categoria_id'));
 
     }
 

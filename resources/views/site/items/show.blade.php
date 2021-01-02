@@ -37,12 +37,12 @@ $url = $var['caminho_absoluto'];
 
                 <div class="tab-pane fade show active" id="show">
 
-                    @include('site.items.form_show')
+                    @include('site.items.form-insert-general', ['mostrar'=> 'N'])
                 </div>
 
                 <div class="tab-pane fade" id="edit">
 
-                    @include('site.items.form_edit')
+                    @include('site.items.form-insert-general')
                 </div>
 
             </div>

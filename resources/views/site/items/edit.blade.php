@@ -16,7 +16,7 @@
 
 
 
-    <div class="index-container ">
+    <div class="index-container p-3">
       <h5> Editar item: {{ $items->name }}</h5>
 
     {{-- @include('site.items.form_edit') --}}

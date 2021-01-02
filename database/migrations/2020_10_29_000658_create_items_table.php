@@ -35,7 +35,7 @@ class CreateItemsTable extends Migration
             $table->string('measure_unit')->nullable();
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
-            $table->string('tax-type')->nullable();
+            $table->string('tax_type')->nullable();
             $table->string('st')->nullable();
 
             $table->unsignedBigInteger('category_id');

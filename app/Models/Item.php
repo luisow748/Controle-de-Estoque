@@ -10,7 +10,8 @@ class Item extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'description', 'qty', 'minimum_qty', 'paid_price',
-        'new_price', 'category', 'category_id', 'cod', 'location', 'pb', 'pl', 'width', 'height', 'depth', 'measure_unit', 'brand', 'model', 'st', 'tax-type'];
+        'new_price', 'category', 'category_id', 'cod', 'location', 'pb', 'pl', 'width',
+         'height', 'depth', 'measure_unit', 'brand', 'model', 'st', 'tax_type'];
     protected $attributes = [
         'description' => 'Valor padrão de descrição',
         'photo_name' => 'Valor padrão de Foto',

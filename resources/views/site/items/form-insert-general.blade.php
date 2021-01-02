@@ -1,3 +1,12 @@
+
+<?php
+if(isset($mostrar)){
+    $mostrar = "disabled";
+}else{
+    $mostrar = "";
+}
+?>
+
 <div class="add-item">
     <form method="post" class="" id="cria_item" name="cria_item"
         @if(isset($items->name))
@@ -15,19 +24,19 @@
                 <div class="a1">
                     <h6>Informações Básicas</h6>
                     <label for="cod" class="">Código / SKU:</label>
-                    <input type="number" value="{{$items->cod ?? ''}}" placeholder="{{$items->cod ?? ''}}" class="form-control" name="cod" id="cod">
+                    <input {{$mostrar}} type="number" value="{{$items->cod ?? ''}}" placeholder="{{$items->cod ?? ''}}" class="form-control" name="cod" id="cod">
 
                     <label for="name" class="">Nome: ( <span class='text-danger'>*</span> ) </label>
-                    <input type="text" value="{{$items->name ?? ''}}" class="form-control" name="name" id="name">
+                    <input {{$mostrar}} type="text" value="{{$items->name ?? ''}}" class="form-control" name="name" id="name">
 
                     <label for="description" class="">Descrição:</label>
-                    <input type="text" value="{{$items->description ?? ''}}" placeholder="Descrição do item" class="form-control" name="description"
+                    <input {{$mostrar}} type="text" value="{{$items->description ?? ''}}" placeholder="Descrição do item" class="form-control" name="description"
                         id="description">
                     <label for="paid_price" class="">Custo: </label>
-                    <input type="text" value="{{$items->paid_price ?? ''}}" placeholder="Preço pago (R$)" class="form-control" name="paid_price"
+                    <input {{$mostrar}} type="text" value="{{$items->paid_price ?? ''}}" placeholder="Preço pago (R$)" class="form-control" name="paid_price"
                         id="paid_price">
                     <label for="new_price" class="">Preço de venda:</label>
-                    <input type="text" value="{{$items->new_price ?? ''}}" placeholder="Preço atualizado (R$)" class="form-control" name="new_price"
+                    <input {{$mostrar}} type="text" value="{{$items->new_price ?? ''}}" placeholder="Preço atualizado (R$)" class="form-control" name="new_price"
                         id="new_price">
 
 
@@ -40,7 +49,7 @@
                     --}}
                     @if (isset($categoria))
                         <label for="category" class="">Categoria:</label>
-                        <input disabled type="text" placeholder="" class="form-control" name="category" placeholder="{{ $categoria}}" value="{{ $categoria}}">
+                        <input disabled type="text" class="form-control" name="category" placeholder="{{ $categoria ?? $categoria->name}}" value="{{ $categoria ?? $categoria->name}}">
                         <input hidden name="category_id" value="{{ $categoria_id }}">
                     @else
                         {{-- Se não estiver vindo, mostra os formulários para selecionar a
@@ -58,25 +67,25 @@
                     @endif
 
                     <label for="location" class="">Local de armazenagem:</label>
-                    <input type="text" value="{{$items->location ?? ''}}" placeholder="" class="form-control" name="location" id="location">
+                    <input {{$mostrar}} type="text" value="{{$items->location ?? ''}}" placeholder="" class="form-control" name="location" id="location">
                     <label for="pb" class="">Peso bruto:</label>
-                    <input type="text" value="{{$items->pb ?? ''}}" placeholder="" class="form-control" name="pb" id="pb">
+                    <input {{$mostrar}} type="text" value="{{$items->pb ?? ''}}" placeholder="" class="form-control" name="pb" id="pb">
                     <label for="pl" class="">Peso líquido:</label>
-                    <input type="text" value="{{$items->pl ?? ''}}" placeholder="" class="form-control" name="pl" id="pl">
+                    <input {{$mostrar}} type="text" value="{{$items->pl ?? ''}}" placeholder="" class="form-control" name="pl" id="pl">
 
                 </div>
                 <div class="a3">
                     <h6>Dimensões</h6>
 
                     <label for="location" class="">Comprimento:</label>
-                    <input type="text" value="{{$items->depth ?? ''}}" placeholder="" class="form-control" name="depth" id="depth">
+                    <input {{$mostrar}} type="text" value="{{$items->depth ?? ''}}" placeholder="" class="form-control" name="depth" id="depth">
                     <label for="width" class="">Largura:</label>
-                    <input type="text" value="{{$items->width ?? ''}}" placeholder="" class="form-control" name="width" id="width">
+                    <input {{$mostrar}} type="text" value="{{$items->width ?? ''}}" placeholder="" class="form-control" name="width" id="width">
                     <label for="height" class="">Altura:</label>
-                    <input type="text" value="{{$items->height ?? ''}}" placeholder="" class="form-control" name="height" id="height">
+                    <input {{$mostrar}} type="text" value="{{$items->height ?? ''}}" placeholder="" class="form-control" name="height" id="height">
 
                     <label for="measure_unit" class="">Unidade de medida:</label>
-                    <select placeholder="" class="form-control" name="measure_unit" id="measure_unit">
+                    <select {{$mostrar}} placeholder="" class="form-control" name="measure_unit" id="measure_unit">
                         @if(isset($items->measure_unit))
                             <option value='{{$items->measure_unit}}' selected> {{$items->measure_unit}} </option>
                             <option value='cm'>Centímetro</option>
@@ -96,11 +105,11 @@
                     <h6>Diversos</h6>
 
                     <label for="brand" class="">Marca:</label>
-                    <input type="text" value="{{$items->brand ?? ''}}" placeholder="" class="form-control" name="brand" id="brand">
+                    <input {{$mostrar}} type="text" value="{{$items->brand ?? ''}}" placeholder="" class="form-control" name="brand" id="brand">
                     <label for="model" class="">Modelo:</label>
-                    <input type="text" value="{{$items->model ?? ''}}" placeholder="" class="form-control" name="model" id="model">
-                    <label for="tax-type" class="">Tributação:</label>
-                    <input type="text" value="{{$items['tax-type'] ?? ''}}" placeholder="" class="form-control" name="tax-type" id="tax-type">
+                    <input {{$mostrar}} type="text" value="{{$items->model ?? ''}}" placeholder="" class="form-control" name="model" id="model">
+                    <label for="tax_type" class="">Tributação:</label>
+                    <input {{$mostrar}} type="text" value="{{$items->tax_type ?? ''}}" placeholder="" class="form-control" name="tax_type" id="tax_type">
 
                     <label for="st" class="">
                         ST:
@@ -108,7 +117,7 @@
                             Valor atual: {{$items->st}}.
                         @endif
                     </label>
-                    <select placeholder="" class="form-control" name="st" id="st">
+                    <select {{$mostrar}} placeholder="" class="form-control" name="st" id="st">
                         <option value='cm' selected>Selecione</option>
                         <option value='0'>Opçção 1</option>
                         <option value='1'>Opção 2</option>
@@ -116,13 +125,19 @@
                 </div>
 
                 <div class="b1">
-                    <button type="submit" class="btn btn-primary">
-                        @if(isset($items->name))
-                            Editar
-                         @else
-                             Adicionar
-                         @endif
-                    Item</button>
+
+                        @if(isset($items->name) && ($mostrar == ''))
+                        <button type="submit" class="btn btn-primary">
+                             Editar Item
+                            </button>
+                        @elseif(($mostrar =='disabled'))
+
+                        @else
+                        <button type="submit" class="btn btn-primary">
+                        Adicionar Item
+                        </button>
+                        @endif
+
                 </div>
                 <div class="b2"></div>
                 <div class="b3"></div>

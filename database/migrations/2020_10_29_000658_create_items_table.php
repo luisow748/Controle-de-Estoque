@@ -22,8 +22,8 @@ class CreateItemsTable extends Migration
             $table->text('description')->nullable();
             $table->integer('qty')->default("1")->nullable();
             $table->integer('minimum_qty')->default("1")->nullable();
-            $table->decimal('paid_price', 5, 2)->nullable();
-            $table->decimal('new_price', 5, 2)->nullable();
+            $table->string('paid_price')->nullable();
+            $table->string('new_price')->nullable();
             $table->string('category')->nullable();
 
             $table->string('location')->nullable();

@@ -67,7 +67,25 @@ class ItemController extends Controller
         $request->session()->flash(
             'message',"Item {$item->id} ({$item->name}) criado com sucesso na categoria {$Categoria->name}"
         );
-        return redirect()->route('list_items');
+
+         return redirect()->route('form_update_item', ['id' => $item->id] );
+
+    }
+    public function update(int $id, Request $request)
+    {
+        DB::beginTransaction();
+            $item = Item::find($id);
+            $item->update($request->all());
+            $item->save();
+        DB::commit();
+
+        $request->session()->flash(
+            'message',"Item {$item->id} ({$item->name}) Atualizado com sucesso"
+
+        );
+
+       return redirect()->route('list_items');
+
     }
 
 
@@ -105,22 +123,7 @@ class ItemController extends Controller
     }
 
 
-    public function update(int $id, Request $request)
-    {
-        DB::beginTransaction();
-        $item = Item::find($id);
-        $item->update($request->all());
-        $item->save();
-        DB::commit();
 
-        $request->session()->flash(
-            'message',"Item {$item->id} ({$item->name}) Atualizado com sucesso"
-
-        );
-
-       return redirect()->route('list_items');
-
-    }
     public function listItemsFromCategory(Request $request){
         $items = Item::where('category_id', $request->id)->orderBy('name')->get();
         $cat = Category::find($request->id);

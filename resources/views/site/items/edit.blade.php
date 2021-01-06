@@ -17,9 +17,11 @@
 
 
     <div class="index-container p-3">
-      <h5> Editar item: {{ $items->name }}</h5>
+        <h5> Editar item: {{ $items->name }}</h5>
 
     {{-- @include('site.items.form_edit') --}}
-    @include('site.items.form-insert-general')
+        @include('site.items.form-insert-complete')
+
+    </div>
 
 @endsection

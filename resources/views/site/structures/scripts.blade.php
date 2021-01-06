@@ -27,7 +27,7 @@ $caminho_absoluto = '/';
 
 <script src='{{asset('assets/dist/js/bootstrap.bundle.min.js')}}'></script>
 
-
+<script src="{{asset('assets/dist/js/vanilla-masker.js')}}"></script>
 <script src='{{asset('offcanvas.js')}}'></script>
 
 

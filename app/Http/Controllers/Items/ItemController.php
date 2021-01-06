@@ -48,8 +48,10 @@ class ItemController extends Controller
     }
     public function createWithCategory(Request $request)
     {
-        $categoria = Category::find($request->categoria);
-        $categoria_id = $categoria->category_id;
+        $categoria_obj = Category::find($request->categoria);
+
+        $categoria = $categoria_obj->name;
+        $categoria_id = $categoria_obj->category_id;
 
         return view('site.items.create')->with(compact( 'categoria', 'categoria_id'));
 

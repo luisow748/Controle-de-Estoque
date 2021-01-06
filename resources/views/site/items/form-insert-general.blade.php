@@ -52,7 +52,7 @@ if(isset($mostrar)){
                     --}}
                     @if (isset($categoria))
                         <label for="category" class="">Categoria:</label>
-                        <input disabled type="text" class="form-control" name="category" placeholder="{{ $categoria ?? $categoria->name}}" value="{{ $categoria ?? $categoria->name}}">
+                        <input disabled type="text" class="form-control" name="category" placeholder="{{ $categoria }}" value="{{ $categoria }}">
                         <input hidden name="category_id" value="{{ $categoria_id }}">
                     @else
                         {{-- Se não estiver vindo, mostra os formulários para selecionar a

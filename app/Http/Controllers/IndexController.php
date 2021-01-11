@@ -17,6 +17,11 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function index_bemvindo()
+     {
+        return view ('site.index.index_bemvindo');
+     }
     public function index()
     {
         $category = Category::query()->get();

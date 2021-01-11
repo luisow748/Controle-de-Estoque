@@ -12,6 +12,7 @@ $url = $var['caminho_absoluto'];
 <body>
 
 @include('site.structures.header')
+{{--@include('site.structures.header_bemvindo')--}}
 
 @yield('header')
 

@@ -16,21 +16,25 @@ $user = Auth::user();
     @section('content')
 
 <div class="grid-container">
-    <div class="c1">
+    <div class="c1"> {{-- Coluna Esquerda --}}
         <div class='index-container shadow rounded'>
+            <center>
+                @include('site.structures.buttons.btn-add-item')
+            </center>
 
-            @include('site.structures.buttons.btn-add-item')
-
-            <div class="index-item">
+            <div class="index-item mb-4">
 
                 <livewire:contact-search-bar />
 
             </div>
+
+                @include('site.index.column_categories')
+
         </div>
 
     </div>
 
-    <div class="c2">
+    <div class="c2"> {{-- Coluna MEIO --}}
     <!-- Page Content  -->
         @if(isset($cat))
             @include('site.items.list-items-from-category')
@@ -40,9 +44,9 @@ $user = Auth::user();
 
     </div>
 
-    <div class="c3">
+    <div class="c3"> {{-- Coluna Direita --}}
 
-        @include('site.index.column_categories')
+        {{-- @include('site.index.column_categories') --}}
 
     </div>
 </div>

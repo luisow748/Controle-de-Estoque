@@ -24,13 +24,14 @@ use App\Http\Controllers\Admin\{AdminController, UserController};
 //Aut
 Route::get('/entrar', [EnterController::class, 'index'])->name('form_enter');
 Route::post('/entrar', [EnterController::class, 'enter'])->name('enter');
-
+Route::get('/bemvindo', [IndexController::class, 'index_bemvindo'])->name('welcome');
+Route::get('/funcionalidades', [IndexController::class, 'func']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [IndexController::class, 'index']);
 Route::get('/index', [IndexController::class, 'index'])->name('index');
 Route::get('/index/categoria/{id}', [IndexController::class, 'show_category']);
-Route::get('/funcionalidades', [IndexController::class, 'func']);
+
 
     Route::get('/registrar', [EnterController::class, 'create'])->name('form_register');
     Route::post('/registrar', [EnterController::class, 'store'])->name('register');

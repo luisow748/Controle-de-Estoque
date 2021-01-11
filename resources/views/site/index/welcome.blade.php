@@ -12,7 +12,7 @@
     <h6>Monitore a temperatura do local onde está o estoque</h6>
     <p>Com a integração a sensores controlados por Arduino, é possível enviar dados para o sistema em tempo real.<br>
     Dessa forma, você verifica se o ambiente está em condições de manter os itens</p>
-    <a href="/funcionalidades" class="btn btn-warning btn-block mb-4">Saiba mais!</a>
+    <a href="/funcionalidades" class="btn btn-warning  mb-4">Saiba mais!</a>
 </div>
 <div class='index-item'>
     <h3>Classificação dos Itens do Estoque</h3>
@@ -24,5 +24,5 @@
             Dessa forma, você pode selecionar somente os itens que atendam a determinado critério,
             como por exemplo, os que estão próximos do vencimento.
         </p>
-        <a href="/funcionalidades" class="btn btn-success btn-block mb-4">Confira todas as possibilidades.</a>
+        <a href="/funcionalidades" class="btn btn-success  mb-4">Confira todas as possibilidades.</a>
 </div>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 
 $user = Auth::user();
 ?>
-@extends('layout')
+@extends('layout_bemvindo')
     @section('title')
 
     @endsection

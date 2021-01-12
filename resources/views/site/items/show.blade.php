@@ -41,8 +41,10 @@ $url = $var['caminho_absoluto'];
                 </div>
 
                 <div class="tab-pane fade" id="edit">
+                    @include('site.items.form-insert-complete', ['mostrar'=> null])
 
-                    @include('site.items.form-insert-general')
+                    {{-- @include('site.items.form-insert-general') --}}
+
                 </div>
 
             </div>

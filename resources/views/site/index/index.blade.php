@@ -28,8 +28,6 @@ $user = Auth::user();
 
             </div>
 
-                @include('site.index.column_categories')
-
         </div>
 
     </div>
@@ -46,7 +44,7 @@ $user = Auth::user();
 
     <div class="c3"> {{-- Coluna Direita --}}
 
-        {{-- @include('site.index.column_categories') --}}
+        @include('site.index.column_categories')
 
     </div>
 </div>

@@ -22,10 +22,16 @@ $url = $var['caminho_absoluto'];
             <ul class="nav nav-tabs card-header-tabs p-2">
 
                 <li class="nav-item">
-                    <a class="nav-link active d-inline bg-dark text-white" data-toggle="tab" href="#show">Visualizar Item</a>
+                    <a class="nav-link active d-inline bg-dark text-white"
+                    data-toggle="tab" href="#show">
+                    Informações gerais
+                </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-inline bg-primary text-white" data-toggle="tab" href="#edit">Editar Item</a>
+                    <a class="nav-link d-inline bg-primary text-white"
+                    data-toggle="tab" href="#edit">
+                    Editar Item
+                </a>
                 </li>
 
             </ul>

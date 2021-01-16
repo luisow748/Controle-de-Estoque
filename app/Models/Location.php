@@ -9,7 +9,10 @@ use Item;
 class Location extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'address', 'email', 'contact', 'phone' ];
+    protected $fillable = [
+        'name', 'address', 'email', 'contact', 'phone', 'max_temp',
+        'max_volume'
+    ];
 
     public function items()
     {

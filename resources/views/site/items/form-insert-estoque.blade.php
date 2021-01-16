@@ -21,31 +21,21 @@ if(isset($mostrar)){
 
             <div class="grid-container-add-items">
                 <div class="a1">
-                    <h6>Informações do Estoque</h6>
+                    <h6>Informações do Estoque:</h6>
 
                     <label for="cod" class="">Quantidade Mínima:</label>
                     <input {{$mostrar}} type="number" value="{{$items->minimum_qty ?? ''}}" placeholder="{{$items->minimum_qty ?? ''}}"
                     class="form-control" name="minimum_qty" id="minimum_qty">
 
-                    <label for="name" class="">Quantidade Atual: ( <span class='text-danger'>*</span> ) </label>
+                    <label for="name" class="">Quantidade Atual: ( <span class='text-danger'>calculado automaticamente</span> ) </label>
                     <input disabled {{$mostrar}} type="text" value="{{$items->qty ?? ''}}" class="form-control" name="qty" id="qty">
-
-                    <label for="description" class="">Descrição:</label>
-                    <input {{$mostrar}} type="text" value="{{$items->description ?? ''}}" placeholder="Descrição do item" class="form-control" name="description"
-                        id="description">
-                    <label for="paid_price" class="">Custo: </label>
-                    <input {{$mostrar}} type="text" value="{{$items->paid_price ?? ''}}" placeholder="Preço pago (R$)"
-                    class="form-control moneyClass" name="paid_price"
-                        id="paid_price">
-                    <label for="new_price" class="">Preço de venda:</label>
-                    <input {{$mostrar}} type="text" value="{{$items->new_price ?? ''}}" placeholder="Preço atualizado (R$)"
-                    class="form-control moneyClass" name="new_price"
-                        id="new_price">
 
 
                 </div>
 
                 <div class="a2">
+                    <h6>Locais onde os itens estão:</h6>
+                   @include('site.structures.forms.select_location')
 
                 </div>
                 <div class="a3">
@@ -83,5 +73,5 @@ if(isset($mostrar)){
 
 </div>
 
-@include('site.structures.scripts.masks')
+@include('site.validation.masks')
 @include('site.structures.scripts.load-data-category')

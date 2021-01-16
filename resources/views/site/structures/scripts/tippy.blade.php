@@ -46,4 +46,11 @@
     tippy('#acessUser', {
         content: 'Acessar usuário',
     });
+    tippy('#deleteLocation', {
+        content: 'Deletar local',
+    });
+    tippy('#editLocation', {
+        content: 'Editar local',
+    });
+
 </script>

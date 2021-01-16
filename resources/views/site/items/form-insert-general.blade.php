@@ -125,6 +125,9 @@ if(isset($mostrar)){
                         <option value='0'>Opçção 1</option>
                         <option value='1'>Opção 2</option>
                     </select>
+
+                    <label for="expiration" class="">Vencimento:</label>
+                    <input {{$mostrar}} type="text" value="{{$items->expiration ?? ''}}" placeholder="" class="form-control expiration" name="expiration" id="expiration">
                 </div>
 
                 <div class="b1">
@@ -155,5 +158,5 @@ if(isset($mostrar)){
 
 </div>
 
-@include('site.structures.scripts.masks')
+@include('site.validation.masks')
 @include('site.structures.scripts.load-data-category')

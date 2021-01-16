@@ -7,11 +7,6 @@ $url = $var['caminho_absoluto'];
     Seções
 @endsection
 
-@section('header')
-
-@endsection
-
-
 @section('content')
     <h3>Relação de Seções:</h3>
     @if(!empty($message))

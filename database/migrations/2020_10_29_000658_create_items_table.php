@@ -37,6 +37,7 @@ class CreateItemsTable extends Migration
             $table->string('model')->nullable();
             $table->string('tax_type')->nullable();
             $table->string('st')->nullable();
+            $table->string('expiration')->nullable();
 
             $table->unsignedBigInteger('category_id');
 

@@ -17,10 +17,12 @@ class CreateLocationsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('address');
-            $table->string('email');
-            $table->string('contact');
-            $table->string('phone');
+            $table->string('address')->nullable();
+            $table->string('email')->nullable();
+            $table->string('contact')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('max_temp')->nullable();
+            $table->string('max_volume')->nullable();
         });
     }
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Items\ItemController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Admin\{AdminController, UserController};
+use App\Http\Controllers\Location\LocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +93,14 @@ Route::get('/index/categoria/{id}', [IndexController::class, 'show_category']);
     Route::get('/categorias/editar/{id}', [CategoryController::class, 'update'])->name('form_edit_category');
     Route::post('/categorias/editar/{id}', [CategoryController::class, 'update_store_category']);
     Route::delete('/categorias/{id}', [CategoryController::class, 'destroy']);
+
+    //Locais
+    Route::get('/locais', [LocationController::class, 'index'])->name('list_location');
+    Route::get('/locais/criar', [LocationController::class, 'create'])->name('form_create_location');
+    Route::post('locais/criar', [LocationController::class, 'store'])->name('store_location');
+    Route::get('/locais/editar/{id}', [LocationController::class, 'update'])->name('form_edit_location');
+    Route::post('/locais/editar/{id}', [LocationController::class, 'store_update'])->name('store_update_location');
+    Route::delete('/locais/{id}', [LocationController::class, 'destroy']);
 
 
 

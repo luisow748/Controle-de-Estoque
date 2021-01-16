@@ -10,10 +10,8 @@
             delimiter: ".",
         });
         //VMasker(document.querySelector("input.moneyClass")).maskPattern("");
-        // VMasker(document.getElementById('unit')).maskMoney({unit: 'R$'});
-        // VMasker(document.getElementById("unit")).maskMoney({unit: 'R$'});
-        // VMasker(document.getElementById("unit")).maskMoney({unit: 'R$'});
-        // VMasker(document.getElementById("unit")).maskMoney({unit: 'R$'});
+        VMasker(document.querySelectorAll("input.expiration")).maskPattern("99/99/9999");
+
         // VMasker(document.getElementById("unit")).maskMoney({unit: 'R$'});
        // VMasker(document.getElementById("suffixUnit")).maskMoney({suffixUnit: 'R$'});
 

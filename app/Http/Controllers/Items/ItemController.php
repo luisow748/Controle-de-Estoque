@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Items;
 use App\Classes\Entities\Category as EntitiesCategory;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemsFormRequest;
-use App\Models\{Category, Section, SubCategory, Item};
+use App\Models\{Category, Section, SubCategory, Item, Location};
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -36,14 +36,18 @@ class ItemController extends Controller
         $items = DB::table('items')->find($request->id);
         $categoria = $items->category;
         $categoria_id = $items->category_id;
-        return view('site.items.show', compact('items', 'categoria', 'categoria_id'));
+        $loc = Location::all();
+        return view('site.items.show', compact(
+            'items', 'categoria', 'categoria_id','loc'
+        ));
     }
 
     public function create(Request $request)
     {
         $section = Section::query()->orderBy('id_section')->get();
+        $loc = Location::all();
 
-        return view('site.items.create')->with(compact( 'section'));
+        return view('site.items.create')->with(compact('section', 'loc'));
 
     }
     public function createWithCategory(Request $request)

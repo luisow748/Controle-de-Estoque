@@ -8323,7 +8323,9 @@ a[data-toggle="collapse"] {
   min-height: 100vh;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  overflow-y: hidden;
+}
 
 .btn.btn-primary {
   background: #2f89fc;

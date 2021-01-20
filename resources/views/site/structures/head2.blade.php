@@ -29,7 +29,7 @@ $caminho_absoluto = '/';
 
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
 
-    <link rel='stylesheet' href='{{asset('assets/dist/css/items/items.css')}}' >
+    <link rel='stylesheet' href='{{asset('assets/dist/css/items/estruturas.css')}}' >
 
     <link rel='stylesheet' href='{{asset('assets/dist/css/sidebar4/style.css')}}'> <!-- Sidebar 4 -->
     <link rel='stylesheet' href='{{asset('offcanvas.css')}}'>

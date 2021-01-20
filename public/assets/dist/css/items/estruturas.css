@@ -1,0 +1,10 @@
+.formulario {
+    background-color: rgb(223, 222, 222);
+}
+.formulario input, .formulario select{
+    border: 1px solid rgb(105, 96, 92);
+    margin-bottom: 5px;
+    -webkit-box-shadow: 4px 4px 3px 0px rgba(79, 79, 79, 0.2);
+    -moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.2);
+}

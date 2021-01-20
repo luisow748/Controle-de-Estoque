@@ -8,7 +8,7 @@
 
 @include('site.validation.errors')
 
-        <div class="bg-light border rounded p-2 m-2">
+        <div class="formulario border rounded p-2 m-2">
             <h4>
                 @if(isset($loc))
                     <form method="post" action="/locais/editar/{{$loc->id}}">

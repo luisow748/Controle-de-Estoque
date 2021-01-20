@@ -23,7 +23,7 @@
 
     <form method="post" action='{{route('category_store')}}'>
         @csrf
-        <div class="bg-light border rounded p-2 m-2">
+        <div class="formulario border rounded p-2 m-2">
             <h4>
                 @if(isset($cat))
                 Editar

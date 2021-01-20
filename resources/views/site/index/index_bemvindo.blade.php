@@ -14,12 +14,6 @@ $user = Auth::user();
     @endsection
 
     @section('content')
-
-
-    @endsection
-
-
-    @section('content1')
     <div class="grid-container">
         <div class="c1"> {{-- Coluna Esquerda --}}
             <div class='index-container shadow rounded'>
@@ -44,7 +38,7 @@ $user = Auth::user();
             @if(isset($cat))
                 @include('site.items.list-items-from-category')
             @else
-                @include('site.index.welcome')
+                @include('site.index.welcome', ['user'=> $user])
             @endif
 
         </div>

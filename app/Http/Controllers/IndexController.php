@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Section;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class IndexController extends Controller
@@ -20,14 +21,16 @@ class IndexController extends Controller
 
      public function index_bemvindo()
      {
+
         return view ('site.index.index_bemvindo');
      }
     public function index()
     {
         $category = Category::query()->get();
         $section = Section::query()->get();
+        $user = Auth::user();
 
-        return view('site.index.index')->with(compact('category', 'section'));
+        return view('site.index.index')->with(compact('category', 'section', 'user'));
     }
     public function show_category(Request $request)
     {

@@ -21,7 +21,7 @@
 
     <form method="post">
         @csrf
-        <div class="bg-light border rounded p-2 m-2">
+        <div class="formulario border rounded p-2 m-2">
             <h4>Adicionar Seção: </h4>
             <div class="form-row align-items-center mb-4">
                 <div class="col-4 border  rounded m-1">

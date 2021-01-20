@@ -16,8 +16,6 @@ $url = $var['caminho_absoluto'];
 
 @yield('header')
 
-
-
 <!-- Page Content  -->
         <div id="content" class="p-2 pt-5">
 

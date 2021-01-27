@@ -33,20 +33,11 @@ class EnterController extends Controller
 
     public function create()
     {
-        return view('aut.register');
+
     }
 
     public function store(Request $input)
     {
-        User::create([
-            'name' => $input['name'],
-            'email' => $input['email'],
-            'password' => Hash::make($input['password']),
-            'is_admin' => $input['is_admin'],
-        ]);
-        $input->session()->flash(
-            'message',"Usuário {$input->name} cadastrado.",
-        );
-        return redirect('/admin/usuarios');
+
     }
 }

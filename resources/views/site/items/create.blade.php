@@ -24,11 +24,6 @@
     </div>
 
 
-
-
-
-
-
 @endsection
 
 @section('scripts')

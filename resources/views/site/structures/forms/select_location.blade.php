@@ -1,5 +1,5 @@
     <!-- Local -->
-
+<laber for='location'>Localização Física do Item:</laber>
     <select  class="form-control" name="location" id="location" >
 
         <option >Escolha um Local</option>
@@ -10,7 +10,7 @@
             </option>
         @endif
 
-        @foreach($loc as $l)
+        @foreach($location as $l)
             <option value="{{$l->name}}">
                 {{$l->name}}
             </option>

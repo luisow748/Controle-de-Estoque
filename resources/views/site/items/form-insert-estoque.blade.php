@@ -19,7 +19,7 @@ if(isset($mostrar)){
 
             @csrf
 
-            <div class="grid-container-add-items">
+            <div class="grid-container-add-items formulario p-1">
                 <div class="a1">
                     <h6>Informações do Estoque:</h6>
 
@@ -30,12 +30,13 @@ if(isset($mostrar)){
                     <label for="name" class="">Quantidade Atual: ( <span class='text-danger'>calculado automaticamente</span> ) </label>
                     <input disabled {{$mostrar}} type="text" value="{{$items->qty ?? ''}}" class="form-control" name="qty" id="qty">
 
+                    @include('site.structures.forms.select_location')
 
                 </div>
 
                 <div class="a2">
                     <h6>Locais onde os itens estão:</h6>
-                   @include('site.structures.forms.select_location')
+
 
                 </div>
                 <div class="a3">

@@ -7,7 +7,7 @@ if(isset($mostrar)){
 }
 ?>
 
-<div class="add-item">
+<div class="add-item formulario">
     <form method="post" class="" id="cria_item" name="cria_item"
         @if(isset($items->name))
         action="/items/editar/{{$items->id}}" {{--Se há dados vindo, trata-se de uma edição, (destino: gravar dados) --}}
@@ -20,7 +20,7 @@ if(isset($mostrar)){
 
             @csrf
 
-            <div class="grid-container-add-items">
+            <div class="grid-container-add-items formulario p-1">
                 <div class="a1">
                     <h6>Informações Básicas</h6>
 
@@ -47,17 +47,14 @@ if(isset($mostrar)){
 
                 <div class="a2">
                     <h6>Localização do Item</h6>
-                    {{--Se estiver vindo um Model Categoria, não seleciona seção nem
-                    categoria
-                    --}}
-                    @if (isset($categoria))
+                    {{--Se estiver vindo um Model Categoria, não seleciona seção nem categoria--}}
+                    @if ( (isset($items->category)) || (isset($categoria)) )
                         <label for="category" class="">Categoria:</label>
-                        <input disabled type="text" class="form-control" name="category" placeholder="{{ $categoria }}" value="{{ $categoria }}">
-                        <input hidden name="category_id" value="{{ $categoria_id }}">
+                        <input disabled type="text" class="form-control" name="category"
+                        placeholder="{{ $items->category ?? $categoria->name }}" value="{{ $items->category ?? $categoria->name }}">
+                        <input hidden name="category_id" value="{{ $items->category_id ?? $categoria->id_category }}">
                     @else
-                        {{-- Se não estiver vindo, mostra os formulários para selecionar a
-                        seção e
-                        categoria--}}
+                        {{-- Se não estiver vindo, mostra os formulários para selecionar a seção e categoria--}}
                         <input hidden name="category_id" value="1"> {{-- Se não for edição, coloca 1 como valor padrão e depois atualizará --}}
                         @if(isset($section))
 

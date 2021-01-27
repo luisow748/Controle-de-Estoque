@@ -24,54 +24,51 @@ class ItemController extends Controller
     {
         $category = Category::query()->get();
         $message = $request->session()->get('message');
-        return view('site.items.items', compact('category', 'message'));
-        // $items = Item::query()->orderBy('id')->get();
-        // $category = Category::query()->get();
-
-        // return view('site.items.index', compact('items', 'message', 'category'));
+            return view('site.items.items', compact('category', 'message'));
     }
 
     public function show(Request $request)
     {
-        $items = DB::table('items')->find($request->id);
-        $categoria = $items->category;
-        $categoria_id = $items->category_id;
-        $loc = Location::all();
-        return view('site.items.show', compact(
-            'items', 'categoria', 'categoria_id','loc'
-        ));
+        $items = Item::find($request->id);
+        $location = Location::all();
+        return view('site.items.show', compact('items', 'location'));
     }
 
     public function create(Request $request)
     {
         $section = Section::query()->orderBy('id_section')->get();
-        $loc = Location::all();
-
-        return view('site.items.create')->with(compact('section', 'loc'));
+        $location = Location::all();
+        return view('site.items.create')->with(compact('section', 'location'));
 
     }
     public function createWithCategory(Request $request)
     {
-        $categoria_obj = Category::find($request->categoria);
+        $categoria = Category::find($request->categoria);
 
-        $categoria = $categoria_obj->name;
-        $categoria_id = $categoria_obj->category_id;
-
-        return view('site.items.create')->with(compact( 'categoria', 'categoria_id'));
+        $location = Location::all();
+        return view('site.items.create')->with(compact( 'categoria', 'location'));
 
     }
 
+    public function edit(int $id, Request $request)
+    {
+        $items = Item::find($id);
+        $location = Location::all();
+        $message = $request->session()->get('message');
+        return view('site.items.edit')->with(compact('items', 'location', 'message'));
+    }
 
     public function store(ItemsFormRequest $request)
     {
         DB::beginTransaction();
-            $Categoria = Category::find($request->category_id); // seleciona a categoria à qual pertence
+            $categoria = Category::find($request->category_id); // seleciona a categoria à qual o item pertence
             $item = Item::create($request->all()); //cria novo item
-            $item->category = "$Categoria->name"; // atualiza o campo categoria do item criado
+            $item->category = "$categoria->name"; // atualiza o campo categoria do item criado
             $item->save(); // salva a alteração
         DB::commit();
         $request->session()->flash(
-            'message',"Item {$item->id} ({$item->name}) criado com sucesso na categoria {$Categoria->name}"
+            'message',
+            "Item {$item->id} ({$item->name}) criado com sucesso na categoria {$item->category}"
         );
 
          return redirect()->route('form_update_item', ['id' => $item->id] );
@@ -87,7 +84,6 @@ class ItemController extends Controller
 
         $request->session()->flash(
             'message',"Item {$item->id} ({$item->name}) Atualizado com sucesso"
-
         );
 
        return redirect()->route('list_items');
@@ -120,13 +116,6 @@ class ItemController extends Controller
 
 
 
-    public function edit(int $id)
-    {
-        $items = Item::find($id);
-        $categoria = $items->category;
-        $categoria_id = $items->category_id;
-        return view('site.items.edit')->with(compact('items', 'categoria', 'categoria_id'));
-    }
 
 
 

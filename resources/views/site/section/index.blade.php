@@ -38,15 +38,10 @@ $url = $var['caminho_absoluto'];
                                   'remover {{addslashes($cat->name)}}?')">
                             @csrf
                             @method('DELETE')
-
-                                    <button id="lixeira" class="btn btn-danger btn-sm m-1" >
-                                        <i class="far fa-trash-alt "></i> </button>
-
+                                <button id="lixeira" class="btn btn-danger btn-sm m-1" >
+                                    <i class="far fa-trash-alt "></i>
+                                 </button>
                         </form>
-
-
-                            <button id="acessSection" class="btn btn-dark btn-sm m-1">
-                                <i class="fas fa-angle-double-right "></i> </button>
 
                         <form method="post" action="/categorias/criar/{{$cat->id_section}}">
                             @csrf
@@ -55,9 +50,9 @@ $url = $var['caminho_absoluto'];
                         </form>
 
                         <a href="/secoes/editar/{{$cat->id_section}}">
-
-                        <button id="editSection" class="btn btn-success btn-sm m-1" >
-                            <i class="fa fa-database"></i></button>
+                            <button id="editSection" class="btn btn-success btn-sm m-1" >
+                                <i class="fa fa-database"></i>
+                            </button>
                         </a>
 
                     </div>

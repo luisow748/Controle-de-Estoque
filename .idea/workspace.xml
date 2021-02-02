@@ -24,11 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="976b766a-c548-4c19-ac3f-786c6710a9d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/index/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/index/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Items/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Items/ItemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Location/LocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Location/LocationController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +192,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../espaco" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -290,6 +288,7 @@
       <workItem from="1607899585915" duration="94000" />
       <workItem from="1609019568985" duration="13000" />
       <workItem from="1610311667165" duration="230000" />
+      <workItem from="1612122678662" duration="761000" />
     </task>
     <servers />
   </component>
@@ -309,14 +308,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="349" y="67" key="#CLI_Interpreters" timestamp="1602283712063">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="67" key="#CLI_Interpreters/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1602283712063" />
-    <state x="475" y="55" key="#PHP" timestamp="1602283714146">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="475" y="55" key="#PHP/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1602283714146" />
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603843342374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -325,14 +316,6 @@
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="644" y="272" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1739.939/-1280.56.1159.888@0.0.1739.939" timestamp="1606176556679" />
-    <state x="642" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1602193677308">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="642" y="67" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1602193677308" />
-    <state x="559" y="188" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602189950736">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="559" y="188" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1602189950736" />
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604506480668">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -340,7 +323,6 @@
     <state x="622" y="175" key="FileChooserDialogImpl" timestamp="1606176801015">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1602283850660" />
     <state x="622" y="175" key="FileChooserDialogImpl/0.0.1739.939/-1280.56.1159.888@0.0.1739.939" timestamp="1606176801015" />
     <state width="1493" height="275" key="GridCell.Tab.0.bottom" timestamp="1604618346651">
       <screen x="0" y="0" width="1536" height="824" />
@@ -374,10 +356,6 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="275" key="GridCell.Tab.1.right/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1604618346651" />
-    <state x="513" y="135" key="NewPhpClassDialog" timestamp="1603323442967">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="513" y="135" key="NewPhpClassDialog/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1603323442967" />
     <state x="684" y="383" key="NewPhpFileDialog" timestamp="1605921235037">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
@@ -387,16 +365,12 @@
     <state x="684" y="383" key="NewPhpFileDialog/0.0.1739.939/-1280.62.1159.888@0.0.1739.939" timestamp="1605055630500" />
     <state x="684" y="383" key="NewPhpFileDialog/0.0.1739.939/1920.0.1159.888@0.0.1739.939" timestamp="1605053166979" />
     <state x="755" y="424" key="NewPhpFileDialog/0.0.1920.1040/-1280.56.1280.984@0.0.1920.1040" timestamp="1605647245871" />
-    <state x="12" y="159" key="SettingsEditor" timestamp="1606176805338">
-      <screen x="0" y="0" width="1739" height="939" />
+    <state x="14" y="80" key="SettingsEditor" timestamp="1612122941976">
+      <screen x="0" y="0" width="1966" height="789" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1602280922570" />
     <state x="12" y="153" key="SettingsEditor/0.0.1676.902/-1280.56.1117.853@0.0.1676.902" timestamp="1605221663425" />
     <state x="12" y="159" key="SettingsEditor/0.0.1739.939/-1280.56.1159.888@0.0.1739.939" timestamp="1606176805338" />
-    <state x="479" y="11" width="578" height="801" key="find.popup" timestamp="1602195062853">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="479" y="11" width="578" height="801" key="find.popup/0.0.1536.824/-1280.0.1280.1024@0.0.1536.824" timestamp="1602195062853" />
+    <state x="14" y="80" key="SettingsEditor/0.0.1966.789/-1280.0.983.746@0.0.1966.789" timestamp="1612122941976" />
     <state x="305" y="244" key="ftp.server.browser" timestamp="1606176758579">
       <screen x="0" y="0" width="1739" height="939" />
     </state>

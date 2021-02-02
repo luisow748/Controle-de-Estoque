@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers\Items;
 
-use App\Classes\Entities\Category as EntitiesCategory;
+
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemsFormRequest;
-use App\Models\{Category, Section, SubCategory, Item, Location};
-
+use App\Models\{Category, Section, Item, Location};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use phpDocumentor\Reflection\Types\Null_;
-use function PHPUnit\Framework\isEmpty;
+
 
 
 class ItemController extends Controller
@@ -101,23 +99,18 @@ class ItemController extends Controller
     }
 
     public function leave(Request $request){
-        DB::beginTransaction();
-        $item = Item::find($request->id);
-        $item->qty = 0;
-        $item->save();
-        DB::commit();
-        $request->session()->flash(
-            'message',"Item {$item->id} ({$item->name}) baixado com sucesso. Quantidade atual: {$item->qty}."
 
-        );
+        DB::beginTransaction();
+            $item = Item::find($request->id);
+            $item->qty = 0;
+            $item->save();
+        DB::commit();
+            $request->session()->flash(
+                'message',"Item {$item->id} ({$item->name}) baixado com sucesso. Quantidade atual: {$item->qty}."
+
+            );
         return redirect()->route('list_items');
     }
-
-
-
-
-
-
 
     public function listItemsFromCategory(Request $request){
         $items = Item::where('category_id', $request->id)->orderBy('name')->get();

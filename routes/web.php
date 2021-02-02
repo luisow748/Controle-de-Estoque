@@ -44,16 +44,20 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/', [AdminController::class, 'index']);
         //Users
-        Route::get('/usuarios', [UserController::class, 'list_users'])->name('list_users');
+        Route::get('/usuarios', [AdminController::class, 'list_users'])->name('list_users');
         Route::get('/usuarios/criar', [UserController::class, 'create'])->name('create_users');
         Route::post('/usuarios/criar', [UserController::class, 'store'])->name('store_users');
-        Route::get('/usuarios/{id}', [UserController::class, 'show'])->name('show_user');
-        Route::get('/usuarios/editar/{id}', [UserController::class, 'update'])->name('update_users');
-        Route::post('/usuarios/editar/{id}', [UserController::class, 'store_update'])->name('store_update_users');
+        Route::get('/usuarios/{id}', [AdminController::class, 'show'])->name('show_user');
+        Route::get('/usuarios/editar/{id}', [AdminController::class, 'update'])->name('update_users');
+        Route::post('/usuarios/editar/{id}', [AdminController::class, 'store_update'])->name('store_update_users');
         Route::delete('/usuarios/{id}', [UserController::class, 'destroy'])->name('delete_user');
-        Route::get('/area_usuario', [UserController::class, 'userArea']);
+
 
     });
+    //Usuários
+    Route::get('/area_usuario', [UserController::class, 'user_area'])->name('user_area');
+    Route::get('/area_usuario/editar', [UserController::class, 'edit_user']);
+    Route::post('/area_usuario/editar', [UserController::class, 'store_updated_user'])->name('store_updated_users');
 
     // ITEMS
     Route::group(['prefix' => 'items'], function () {

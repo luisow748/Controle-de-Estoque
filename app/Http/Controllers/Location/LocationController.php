@@ -25,13 +25,12 @@ class LocationController extends Controller
         DB::beginTransaction();
 
             $location = Location::create($request->all()); //cria novo local
+            $request->session()->flash(
+                'message',"Local {$location->id} ({$location->name}) criado com
+                sucesso "
+            );
 
         DB::commit();
-
-        $request->session()->flash(
-            'message',"Local {$location->id} ({$location->name}) criado com
-            sucesso "
-        );
 
          return redirect()->route('list_location');
 

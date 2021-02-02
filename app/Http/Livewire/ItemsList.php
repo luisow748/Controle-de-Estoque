@@ -11,9 +11,9 @@ class ItemsList extends Component
 
     public function render()
     {
-        $items = Item::where('category_id', $this->category->id_category);
+        // $items = Item::where('category_id', $this->category->id_category);
         return view('livewire.items-list',[
-            'items' => $items,
+            // 'items' => $items,
         ]);
     }
 }

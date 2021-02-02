@@ -124,7 +124,7 @@
 
         </ul>
     @if(Auth::user())
-    <span class="mr-1">Olá,</span>
+    <span class="mr-1">Olá </span>
 
             {{--        Área do USUÁRIO --}}
             <div class="dropdown mr-3 pr-3">
@@ -135,11 +135,11 @@
                 <div class="dropdown-menu dropdown-menu-left" >
                     <a class="dropdown-item" type="button"
                     href="{{config('variaveis.area_usuario_link')}}">
-                        Usuário
+                        Meus dados
                     </a>
                     <a class="dropdown-item" type="button"
                     href="{{config('variaveis.area_usuario_opcoes_link')}}">
-                        Opções
+                        Editar dados
                     </a>
 
                 </div>

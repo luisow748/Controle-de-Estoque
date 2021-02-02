@@ -15,7 +15,7 @@
             <a href='{{config('variaveis.link2l')}}'><span class='fa fa-home mr-3'></span>
                 {{config('variaveis.link2')}} </a>
         </li>
-        <li>
+        {{-- <li>
             <a href=''><span class='fa fa-paper-plane mr-3'></span>
                 Side_menu_3 </a>
         </li>
@@ -30,7 +30,7 @@
         <li>
             <a href=''><span class='fa fa-satellite-dish mr-3'></span>
                 Side_menu_6 </a>
-        </li>
+        </li> --}}
     </ul>
 
 </nav>

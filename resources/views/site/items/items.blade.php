@@ -13,20 +13,21 @@ use App\Models\Item;
 
 @section('content')
 <!-- Vertical navbar -->
-<h3>Items por Categoria:</h3>
+
 
 @include('site.structures.buttons.btn-add-item')
 @include('site.structures.buttons.btn-index')
 
     <div class="d-flex flex-row flex-wrap mb-3 index-container">
 
-        @foreach($category as $cat)
+        {{-- @foreach($category as $cat) --}}
         <div class="index-item">
+            <h5>Últimos itens cadastrados</h5>
 
-            <livewire:items-list :category="$cat"/>
+            <livewire:items-list />
 
         </div>
-        @endforeach
+        {{-- @endforeach --}}
 
     </div>
 
